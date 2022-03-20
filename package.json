@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "adamhemzal.com",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Adam Hemzal's personal website",
   "version": "0.1.0",
-  "license": "0BSD",
+  "author": "Adam Hemzal",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
