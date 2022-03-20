@@ -33,7 +33,16 @@ module.exports = {
       center: true,
       padding: '1rem',
     },
-    extend: {},
+    extend: {
+      fontSize: {
+        'body': '1.05rem',
+        'h1': '3.052em',
+        'h2': '2.441em',
+        'h3': '1.953em',
+        'h4': '1.563em',
+        'h5': '1.25em',
+      }
+    },
   },
   // Add Tailwind plugins for additional functionality
   plugins: [],

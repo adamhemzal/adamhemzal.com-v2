@@ -1,0 +1,18 @@
+/* TAILWINDCSS */
+@import "./tailwind/base";
+@import "./tailwind/components";
+@import "./tailwind/utilities";
+
+/* BASE */
+@import "./base/global";
+
+/* TEMPLATES */
+@import "./templates/post";
+@import "./templates/project";
+
+/* COMPONENTS */
+@import "./components/header";
+@import "./components/navigation";
+
+
+

@@ -14,10 +14,53 @@ module.exports = {
   },
 	plugins: [
     /*********************************************** 
-     * SASS + TailwindCSS
+     * PostCSS + TailwindCSS
     ************************************************/
+    `gatsby-plugin-postcss`,
     /*********************************************** 
      * Files, images and static assets 
     ************************************************/
+     `gatsby-plugin-sharp`,
+     `gatsby-transformer-sharp`,
+     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/content/projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/static/`,
+      },
+    },
+    /*********************************************** 
+     * Markdown 
+    ************************************************/
+     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+		    {
+          resolve: `gatsby-remark-images`,
+          options: {
+            backgroundColor: `transparent`,
+            withWebp: true,
+            maxWidth: 900,
+          }
+	      },
+        ]
+      }
+    },
+    
 	],
 }

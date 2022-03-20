@@ -1,0 +1,33 @@
+.nav-container {
+    @apply container h-16 flex flex-row justify-between items-center;
+}
+
+.nav__mobile-menu {
+    @apply inline-block w-12 md:hidden;
+}
+
+/* Mobile Navigation */
+.nav__mobile {
+    @apply h-screen w-screen absolute z-10 backdrop-blur-md bg-colorWhite bg-opacity-75 top-16 inset-x-0 justify-start flex-col font-light border-t-2 border-colorGrayLight md:hidden;
+
+    .nav__link {
+        @apply inline-block text-center w-full py-6 hover:bg-colorOrangeLight focus:bg-colorOrangeLight;
+    }
+
+    .nav__link-active {
+        @apply bg-colorOrange text-colorWhite font-medium;
+    }
+}
+
+/* Desktop Navigation */
+.nav__desktop {
+    @apply hidden font-light md:flex;
+
+    .nav__link {
+        @apply inline-block w-full px-2.5 hover:text-colorOrange;
+    }
+
+    .nav__link-active {
+        @apply font-medium text-colorOrange;
+    }
+}
