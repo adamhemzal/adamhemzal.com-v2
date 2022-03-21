@@ -52,3 +52,7 @@ img {
 blockquote, ol, p, table, ul {
     font-size: theme('fontSize.body');
 }
+
+.button {
+    
+}

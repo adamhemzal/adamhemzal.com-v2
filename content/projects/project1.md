@@ -1,12 +1,12 @@
 ---
-title: "Project 1"
 slug: "project-1"
+title: "Project 1"
+category: "test2"
+type: "project"
+skills: ["gatsby", "react", "css"]
+language: "en"
 created: "2022-03-09"
 last-update: "2022-03-11"
-category: "test2"
-tags: ["trollo", "putin", "meat"]
-language: "en"
-type: "project"
 ---
 
 # This is project 1

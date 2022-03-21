@@ -1,5 +1,5 @@
 ---
-title: "Article2"
+title: "Article 2"
 slug: "article-2"
 created: "2022-03-09"
 last-update: "2022-03-11"

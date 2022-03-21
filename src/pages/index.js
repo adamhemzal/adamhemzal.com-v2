@@ -1,7 +1,10 @@
 import React from "react";
+import { Link, graphql } from "gatsby";
 import LinkButton from "../components/LinkButton";
 
-export default function HomePage() {
+export default function WebIndexPage({ data }) {
+  const result = data;
+  console.log(result);
   return (
     <article className="container pt-10">
       <header className="">
@@ -24,3 +27,36 @@ export default function HomePage() {
     </article>
   );
 }
+
+export const pageQuery = graphql`
+query IndexQuery {
+  posts: allMarkdownRemark(
+    limit: 7
+    sort: {fields: frontmatter___created, order: DESC}
+    filter: {frontmatter: {type: {eq: "article"}}}
+  ) {
+    nodes {
+      frontmatter {
+        category
+        created(formatString: "MMM DD, YYYY")
+        slug
+        title
+      }
+    }
+  }
+  projects: allMarkdownRemark(
+    limit: 3
+    sort: {fields: frontmatter___created, order: DESC}
+    filter: {frontmatter: {type: {eq: "project"}}}
+  ) {
+    nodes {
+      frontmatter {
+        category
+        created(formatString: "MMM DD, YYYY")
+        slug
+        title
+      }
+    }
+  }
+}
+`

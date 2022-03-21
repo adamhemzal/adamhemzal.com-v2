@@ -2,9 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 
 export default function PostTemplate({ data }) {
-    const { markdownRemark } = data; // data.markdownRemark holds your post data
-    const { frontmatter, html } = markdownRemark;
-
+  const result = data.markdownRemark;
+  const { html } = data.markdownRemark;
+console.log(result);
     return (
         <div
         className="blog-post-content"
@@ -13,25 +13,24 @@ export default function PostTemplate({ data }) {
     )
 }
 
-/*
-
-export const query = graphql`
-query SinglePostQuery($id: String) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      excerpt
-      html
-      frontmatter {
-        category
-        created(formatString: "MMM DD, YYYY")
-        language
-        last_update(formatString: "MMM DD, YYYY")
-        slug
-        tags
-        title
-        type
-      }
+export const pageQuery = graphql`
+query BlogPostById($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    id
+    excerpt(pruneLength: 160)
+    html
+    frontmatter {
+      last_update(formatString: "MMM DD, YYYY")
+      language
+      category
+      title
+      tags
     }
   }
+  site {
+    siteMetadata {
+      title
+    }
+  }
+}
 `
-*/
