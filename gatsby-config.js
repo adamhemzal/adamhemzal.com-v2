@@ -1,3 +1,5 @@
+const { lazy } = require("react");
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -14,14 +16,34 @@ module.exports = {
   },
 	plugins: [
     /*********************************************** 
-     * PostCSS + TailwindCSS
+     * PostCSS + TailwindCSS + Images
     ************************************************/
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     /*********************************************** 
-     * Files, images and static assets 
+     * Markdown 
     ************************************************/
-     `gatsby-plugin-sharp`,
-     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              backgroundColor: `transparent`,
+              withWebp: true,
+              quality: 80,
+              maxWidth: 900,
+            },
+          },
+        ],
+      },
+    },
+    /*********************************************** 
+     * Static Sources
+    ************************************************/
      {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,28 +61,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
+        name: `static`,
         path: `${__dirname}/static/`,
       },
     },
-    /*********************************************** 
-     * Markdown 
-    ************************************************/
-     {
-      resolve: `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [
-		    {
-          resolve: `gatsby-remark-images`,
-          options: {
-            backgroundColor: `transparent`,
-            withWebp: true,
-            maxWidth: 900,
-          }
-	      },
-        ]
-      }
+        name: `assets`,
+        path: `${__dirname}/assets`,
+      },
     },
     
-	],
+	]
 }

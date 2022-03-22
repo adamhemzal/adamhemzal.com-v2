@@ -35,12 +35,13 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        'body': '1.05rem',
+        'body': '1.05em',
         'h1': '3.052em',
         'h2': '2.441em',
         'h3': '1.953em',
         'h4': '1.563em',
         'h5': '1.25em',
+        'button': '1.15em',
       }
     },
   },

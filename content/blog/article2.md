@@ -1,6 +1,6 @@
 ---
-title: "Article1"
-slug: "article-1"
+title: "Article2"
+slug: "article-2"
 created: "2022-03-12"
 last-update: "2022-03-14"
 category: "test"
@@ -29,4 +29,4 @@ block code here
 
 This is `inline code` 
 
-![Alt text](./images/TFSA-RRSP.PNG)
+![Some text Here](./assets/TFSA-RRSP.png)

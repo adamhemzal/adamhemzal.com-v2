@@ -12,7 +12,7 @@ body {
     color: theme('colors.colorBlack');
     font-family: theme('fontFamily.sans');
     font-weight: theme('fontWeight.light');
-    font-size: 100%;
+    font-size: 107%;
     line-height: 1.65;
     margin: 0;
     padding: 0;
@@ -51,8 +51,4 @@ img {
 
 blockquote, ol, p, table, ul {
     font-size: theme('fontSize.body');
-}
-
-.button {
-    
 }

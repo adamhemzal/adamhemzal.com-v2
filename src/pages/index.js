@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import { StaticImage } from 'gatsby-plugin-image';
 import LinkButton from "../components/LinkButton";
 
 export default function WebIndexPage({ data }) {
@@ -7,9 +8,23 @@ export default function WebIndexPage({ data }) {
   console.log(result);
   return (
     <article className="container pt-10">
-      <header className="">
-          <h1 className="font-bold">Hey, I'm Adam</h1>
-          <h2 className="font-light">Software Engineer with the focus on Front-End, UX & Web 3.0</h2>
+      <header className="grid grid-cols-1 gap-4 lg:grid-cols-12">
+          <div className="lg:col-span-6">
+            <h1 className="font-bold mb-4">Hey, I'm Adam</h1>
+            <h2 className="font-light mb-6 text-h3">Software Engineer with the focus on Front-End, UX & Web 3.0</h2>
+            <p className="text-justify">
+              <strong className="font-bold">I love</strong> building projects and write about what I learn and do. This website is my personal digital garden. A place where you can find my notes, thoughts and tutorials on topics like web, design, technology, privacy, crypto, and more.
+            </p>
+            <Link to="/projects" className="button dark">View projects</Link>
+            <Link to="/about" className="button">More about me</Link>
+          </div>
+          <div className="lg:col-span-6 place-self-center">
+            <StaticImage 
+              alt="Photo of Adam Hemzal"
+              src="../images/adam-hemzal-drawing-optimized.png"
+            />
+          </div>
+          <p className="lg:col-span-12">Arrow here</p>
       </header>
       <section>
           <h2 className="font-bold"><span>Latest Articles</span> <a href="#allarticles">All Articles</a></h2>
