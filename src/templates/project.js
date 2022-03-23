@@ -2,6 +2,8 @@ import React from "react";
 
 export default function ProjectTemplate() {
     return (
-        <div>This is project template with</div>
+        <div className="container">
+            This is project template with
+        </div>
     );
 }

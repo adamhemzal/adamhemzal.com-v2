@@ -1,0 +1,9 @@
+.button {
+    @apply inline-block font-light border-2 border-colorBlack py-1.5 px-7 text-button rounded hover:shadow-lg hover:scale-105 transition;
+    
+}
+
+.button__dark {
+    @apply bg-colorBlack text-colorWhite;
+}
+

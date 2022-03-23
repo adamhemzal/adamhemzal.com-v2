@@ -6,8 +6,8 @@ export default function PostTemplate({ data }) {
   const { html } = data.markdownRemark;
 console.log(result);
     return (
-        <div
-        className="blog-post-content"
+      <article
+        className="container pt-12 blog-post-content "
         dangerouslySetInnerHTML={{ __html: html }}
       />
     )

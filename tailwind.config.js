@@ -42,6 +42,7 @@ module.exports = {
         'h4': '1.563em',
         'h5': '1.25em',
         'button': '1.15em',
+        'small': '0.85rem',
       }
     },
   },

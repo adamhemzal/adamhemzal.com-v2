@@ -1,8 +1,0 @@
-.button {
-    @apply inline-block font-light border-2 border-colorBlack py-1.5 px-6 text-button rounded;
-    
-    .dark {
-        @apply bg-colorBlack text-colorWhite;
-    }
-}
-
