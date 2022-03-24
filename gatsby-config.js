@@ -41,11 +41,27 @@ module.exports = {
           },
           {
             // handling external links in markdown
-            resolve: "gatsby-remark-external-links",
+            // https://pointjupiter.com/what-noopener-noreferrer-nofollow-explained/
+            resolve: `gatsby-remark-external-links`,
             options: {
-              target: "_self",
-              rel: "noopener"
-            }
+              target: `_self`,
+              rel: `noopener`
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null, // string separator for inline code
+              aliases: {},
+              showLineNumbers: false, // {numberLines: true} for certain code
+              noInlineHighlight: false,
+              prompt: {
+                user: `root`,
+                host: `localhost`,
+                global: true,
+              }
+            },
           }
         ],
       },
@@ -71,15 +87,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `static`,
-        path: `${__dirname}/static/`,
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
-        path: `${__dirname}/src/data`,
+        name: `static`,
+        path: `${__dirname}/static/`,
       },
     },
     

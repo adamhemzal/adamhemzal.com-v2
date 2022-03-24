@@ -7,10 +7,17 @@
 /** 
  * FONTS
  * It's better to implement each font weight specifically. It'll save network bandwidth
-*/
+ */
 import "@fontsource/lexend-deca/300.css";
 import "@fontsource/lexend-deca/500.css";
 import "@fontsource/lexend-deca/700.css";
+
+/** 
+ * PRISM - Styling for <pre> and <code>
+*/
+import "prismjs/plugins/line-numbers/prism-line-numbers.min.css";
+import "prismjs/themes/prism-tomorrow.min.css";
+import "prismjs/plugins/show-language/prism-show-language";
 
 /**
  * GLOBAL STYLES
@@ -22,6 +29,7 @@ import './src/styles/styles.css';
  */
 import React from "react";
 import Layout from "./src/components/Layout";
+
 
 // Wraps every page in a component
 export function wrapPageElement({ element, props }) {
