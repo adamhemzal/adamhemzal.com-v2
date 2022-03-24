@@ -1,12 +1,14 @@
 ---
-title: "How to create reatc architecture Article 1"
 slug: "article-1"
-created: "2022-03-09"
-last-update: "2022-03-11"
+title: "How to create react architecture Article 1"
+description: "Some kind of description in the article here for SEO purpose"
+thumbnail: "./TFSA-RRSP.png"
 category: "test2"
 tags: ["trollo", "putin", "meat"]
 language: "en"
 type: "article"
+created: "2022-03-09"
+last-update: "2022-03-11"
 ---
 
 # This is article 1

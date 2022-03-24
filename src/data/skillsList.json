@@ -1,0 +1,10 @@
+[
+    {"name": "React", "icon": "react"},
+    {"name": "Node", "icon": "node"},
+    {"name": "Gatsby", "icon": "gatsby"},
+    {"name": "WordPress", "icon": "wordpress"},
+    {"name": "Sass", "icon": "sass"},
+    {"name": "Gulp", "icon": "gulp"},
+    {"name": "LeafletJS", "icon": "leaflet"},
+    {"name": "AdobeCC", "icon": "adobe"}
+]

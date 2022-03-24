@@ -1,16 +1,20 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage, getImage } from 'gatsby-plugin-image';
+import { ArrowDown } from "../icons/ArrowDown";
 import ButtonLink from "../components/ButtonLink";
 import PostLink from "../components/PostLink";
-import { ArrowDown } from "../icons/ArrowDown";
-import allSkills from "../data/skillsList";
+import ProjectCard from "../components/ProjectCard";
 
 export default function WebIndexPage({ data }) {
   const { posts, projects } = data;
-  const skills = allSkills;
+
+  const skills = [
+    {name: "React"},
+    {name: "GatsbyJS"},
+    {name: "WhateverJS"}
+  ];
   console.log("posts here:", posts);
-  console.log("projects here:", projects);
   console.log("skills", skills);
   return (
     <article className="container pt-12">
@@ -40,10 +44,11 @@ export default function WebIndexPage({ data }) {
 
       <section>
           <h2 className="font-bold">Latest Articles</h2>
-          <a href="#allarticles">All Articles</a>
+          <ButtonLink path="#allarticles">All Articles</ButtonLink>
           {
             posts.nodes.map( (post) => (
               <PostLink 
+                key={post.frontmatter.slug}
                 path={`blog/${post.frontmatter.slug}`} 
                 title={post.frontmatter.title}
                 category={post.frontmatter.category}
@@ -55,11 +60,26 @@ export default function WebIndexPage({ data }) {
 
       <section>
           <h2 className="font-bold">Selected Projects</h2>
-          <a href="#allProjects" className="">All Projects</a>
+          <ButtonLink path="#allProjects">All Projects</ButtonLink>
           {
-            projects.nodes.map( (project) => (
-              <p>{project.frontmatter.title}</p>
-            ))
+            projects.nodes.map( (project) => {
+              let image = getImage(project.frontmatter.logo);
+              if (!image) {
+                image = project.frontmatter.logo.publicURL;
+              }
+              return (
+                <ProjectCard 
+                  key={project.frontmatter.slug}
+                  path={`projects/${project.frontmatter.slug}`}
+                  title={project.frontmatter.title}
+                  description={project.frontmatter.description}
+                  website={project.frontmatter.website}
+                  logo={image}
+                  duration={project.frontmatter.duration}
+                  customClass=""
+                />
+              )
+            })
           }
       </section>
       
@@ -67,6 +87,11 @@ export default function WebIndexPage({ data }) {
           <h2 className="font-bold">Skills & Tools</h2>
           <ButtonLink path="/about">All Skills</ButtonLink>
 
+          {
+            skills.map( (skill) => (
+              <p>{skill.name}</p>
+            ))
+          }
 
       </section>
       
@@ -83,10 +108,10 @@ query IndexQuery {
   ) {
     nodes {
       frontmatter {
-        category
-        created(formatString: "MMM DD, YYYY")
         slug
         title
+        category
+        created(formatString: "MMM DD, YYYY")
       }
     }
   }
@@ -97,10 +122,18 @@ query IndexQuery {
   ) {
     nodes {
       frontmatter {
-        category
-        created(formatString: "MMM DD, YYYY")
         slug
         title
+        description
+        logo {
+          publicURL
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        website
+        tools
+        duration
       }
     }
   }

@@ -1,12 +1,14 @@
 ---
-title: "Article2"
 slug: "article-2"
-created: "2022-03-12"
-last-update: "2022-03-14"
+title: "Article2"
+description: "what do you think this article 2 is all about?"
+thumbnail: "./"
 category: "test"
 tags: ["trollo", "putin", "meat"]
 language: "en"
 type: "article"
+created: "2022-03-12"
+last-update: "2022-03-14"
 ---
 
 # This is article 2
@@ -51,4 +53,4 @@ let anotherArray = [];
 
 This is `inline code` 
 
-![Hey, image here](./assets/TFSA-RRSP.png)
+![Hey, image here](./TFSA-RRSP.png)

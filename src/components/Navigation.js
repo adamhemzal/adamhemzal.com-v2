@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
-import { navigationList } from "../data/navigationList";
+import { navigationList } from "../data/navigationList.js";
 import { HamburgerIcon } from "../icons/HamburgerIcon";
 
 export default function Navigation() {

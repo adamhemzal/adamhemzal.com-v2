@@ -19,9 +19,9 @@ module.exports = {
      * PostCSS + TailwindCSS + Images
     ************************************************/
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     /*********************************************** 
      * Markdown 
     ************************************************/
@@ -30,6 +30,7 @@ module.exports = {
       options: {
         plugins: [
           {
+            // handling images in markdown 
             resolve: `gatsby-remark-images`,
             options: {
               backgroundColor: `transparent`,
@@ -38,13 +39,22 @@ module.exports = {
               maxWidth: 900,
             },
           },
+          {
+            // handling external links in markdown
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_self",
+              rel: "noopener"
+            }
+          }
         ],
       },
     },
     /*********************************************** 
-     * Static Sources
+     * Static Sources + JSON
     ************************************************/
-     {
+    //`gatsby-transformer-json`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
@@ -68,8 +78,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/assets`,
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
     },
     
