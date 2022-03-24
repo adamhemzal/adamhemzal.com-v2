@@ -12,7 +12,7 @@ body {
     color: theme('colors.colorBlack');
     font-family: theme('fontFamily.sans');
     font-weight: theme('fontWeight.light');
-    font-size: 107%;
+    font-size: 105%;
     line-height: 1.65;
     margin: 0;
     padding: 0;
@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5 {
     color: theme('colors.colorBlack');
     font-weight: theme('fontWeight.bold');
     line-height: 1.25;
+    margin: 3rem 0 1.38rem;
 }
 
 h1 {

@@ -43,6 +43,7 @@ module.exports = {
         'h5': '1.25em',
         'button': '1.15em',
         'small': '0.85rem',
+        'small2x': '0.75rem',
       }
     },
   },

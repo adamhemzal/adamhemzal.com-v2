@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export default function CategoryTag({ children }) {
+export default function CategoryTag({ children, customClass }) {
     return (
-        <span className="py-1 px-5 mx-4 rounded-2xl text-small bg-colorOrangeLight">
+        <span className={`category-tag ${customClass}`}>
             {children}
         </span>
     );

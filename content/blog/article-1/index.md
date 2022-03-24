@@ -1,5 +1,5 @@
 ---
-title: "Article 1"
+title: "How to create reatc architecture Article 1"
 slug: "article-1"
 created: "2022-03-09"
 last-update: "2022-03-11"

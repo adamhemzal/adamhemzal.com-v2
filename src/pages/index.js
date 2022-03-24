@@ -1,20 +1,23 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { StaticImage } from 'gatsby-plugin-image';
-import { ArrowDown } from "../icons/ArrowDown";
 import ButtonLink from "../components/ButtonLink";
 import PostLink from "../components/PostLink";
+import { ArrowDown } from "../icons/ArrowDown";
+import allSkills from "../data/skillsList";
 
 export default function WebIndexPage({ data }) {
   const { posts, projects } = data;
+  const skills = allSkills;
   console.log("posts here:", posts);
   console.log("projects here:", projects);
+  console.log("skills", skills);
   return (
     <article className="container pt-12">
       <header className="grid grid-cols-1 gap-4 mb-6 lg:grid-cols-12">
           <div className="lg:col-span-6">
-            <h1 className="font-bold mb-4">Hey, I'm Adam</h1>
-            <h2 className="font-light mb-6 text-h3">Software Developer with the focus on Front-End, UX & Web 3.0</h2>
+            <h1 className="font-bold mb-4 mt-0">Hey, I'm Adam</h1>
+            <h2 className="font-light mb-6 mt-0 text-h3">Software Developer with the focus on Front-End, UX & Web 3.0</h2>
             <p>
               I help people and brands reach their goals by designing & building user-centric digital products and interactive experiences
             </p>
@@ -53,11 +56,18 @@ export default function WebIndexPage({ data }) {
       <section>
           <h2 className="font-bold">Selected Projects</h2>
           <a href="#allProjects" className="">All Projects</a>
+          {
+            projects.nodes.map( (project) => (
+              <p>{project.frontmatter.title}</p>
+            ))
+          }
       </section>
       
       <section>
           <h2 className="font-bold">Skills & Tools</h2>
           <ButtonLink path="/about">All Skills</ButtonLink>
+
+
       </section>
       
     </article>

@@ -1,5 +1,10 @@
 export const skillsList = [
-    {name: "..", icon: ".."},
-    {name: "..", icon: ".."},
-    {name: "..", icon: ".."}
+    {name: "React", icon: ".."},
+    {name: "Node", icon: ".."},
+    {name: "Gatsby", icon: ".."},
+    {name: "WordPress", icon: ".."},
+    {name: "Sass", icon: ".."},
+    {name: "Gulp", icon: ".."},
+    {name: "LeafletJS", icon: ".."},
+    {name: "AdobeCC", icon: ".."}
 ]
