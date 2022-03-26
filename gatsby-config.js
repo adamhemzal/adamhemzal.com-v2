@@ -16,12 +16,17 @@ module.exports = {
   },
 	plugins: [
     /*********************************************** 
-     * PostCSS + TailwindCSS + Images
+     * PostCSS + TailwindCSS
     ************************************************/
-    `gatsby-plugin-postcss`,
+   `gatsby-plugin-postcss`,
+
+    /*********************************************** 
+     * Images
+    ************************************************/
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
+
     /*********************************************** 
      * Markdown 
     ************************************************/
@@ -49,6 +54,7 @@ module.exports = {
             },
           },
           {
+            // theme for code in markdown
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: 'language-',
@@ -69,7 +75,7 @@ module.exports = {
     /*********************************************** 
      * Static Sources + JSON
     ************************************************/
-    //`gatsby-transformer-json`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

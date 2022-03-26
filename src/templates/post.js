@@ -7,7 +7,7 @@ export default function PostTemplate({ data }) {
 console.log(result);
     return (
       <article
-        className="container pt-12 blog-post-content "
+        className="container pt-12 blog-post-content"
         dangerouslySetInnerHTML={{ __html: html }}
       />
     )

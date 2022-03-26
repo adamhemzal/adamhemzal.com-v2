@@ -7,15 +7,11 @@ import PostLink from "../components/PostLink";
 import ProjectCard from "../components/ProjectCard";
 
 export default function WebIndexPage({ data }) {
-  const { posts, projects } = data;
+  console.log(data);
+  const { posts, projects, skills } = data;
 
-  const skills = [
-    {name: "React"},
-    {name: "GatsbyJS"},
-    {name: "WhateverJS"}
-  ];
-  console.log("posts here:", posts);
-  console.log("skills", skills);
+  //console.log("posts here:", posts);
+  //console.log("skills", skills);
   return (
     <article className="container pt-12">
       <header className="grid grid-cols-1 gap-4 mb-6 lg:grid-cols-12">
@@ -61,26 +57,28 @@ export default function WebIndexPage({ data }) {
       <section>
           <h2 className="font-bold">Selected Projects</h2>
           <ButtonLink path="#allProjects">All Projects</ButtonLink>
-          {
-            projects.nodes.map( (project) => {
-              let image = getImage(project.frontmatter.logo);
-              if (!image) {
-                image = project.frontmatter.logo.publicURL;
-              }
-              return (
-                <ProjectCard 
-                  key={project.frontmatter.slug}
-                  path={`projects/${project.frontmatter.slug}`}
-                  title={project.frontmatter.title}
-                  description={project.frontmatter.description}
-                  website={project.frontmatter.website}
-                  logo={image}
-                  duration={project.frontmatter.duration}
-                  customClass=""
-                />
-              )
-            })
-          }
+          <div className="grid gap-4">
+            {
+              projects.nodes.map( (project) => {
+                let image = getImage(project.frontmatter.logo);
+                if (!image) {
+                  image = project.frontmatter.logo.publicURL;
+                }
+                return (
+                  <ProjectCard 
+                    key={project.frontmatter.slug}
+                    path={`projects/${project.frontmatter.slug}`}
+                    title={project.frontmatter.title}
+                    description={project.frontmatter.description}
+                    website={project.frontmatter.website}
+                    logo={image}
+                    duration={project.frontmatter.duration}
+                    customClass=""
+                  />
+                )
+              })
+            }
+          </div>
       </section>
       
       <section>
@@ -88,9 +86,7 @@ export default function WebIndexPage({ data }) {
           <ButtonLink path="/about">All Skills</ButtonLink>
 
           {
-            skills.map( (skill) => (
-              <p>{skill.name}</p>
-            ))
+
           }
 
       </section>
@@ -137,5 +133,12 @@ query IndexQuery {
       }
     }
   }
+  skills: allSkillsJson {
+    nodes {
+      name
+      icon
+    }
+  }
+
 }
 `

@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "gatsby";
-import { navigationList } from "../data/navigationList.js";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import { HamburgerIcon } from "../icons/HamburgerIcon";
 
 export default function Navigation() {
+    const data = useStaticQuery(graphql`
+        query NavigationQuery {
+            allNavigationJson {
+                nodes {
+                    url
+                    label
+                }
+            }
+        }
+    `);
     const [mobileNav, setMobileNav] = useState(false);
-    const navLinks = navigationList.main;
+    const navLinks = data.allNavigationJson.nodes;
 
     /** 
      * Handling opening menu on mobile
@@ -15,7 +24,7 @@ export default function Navigation() {
     }
 
     useEffect( () => {
-        console.log(mobileNav);
+        //console.log(mobileNav);
     }, [mobileNav])
 
     return (

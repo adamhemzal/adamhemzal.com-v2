@@ -41,7 +41,7 @@ module.exports = {
         'h3': '1.953em',
         'h4': '1.563em',
         'h5': '1.25em',
-        'button': '1.15em',
+        'button': '1.155em',
         'small': '0.85rem',
         'small2x': '0.75rem',
       }

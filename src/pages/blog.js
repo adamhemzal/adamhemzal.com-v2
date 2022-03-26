@@ -6,8 +6,8 @@ export default function BlogIndexPage({ data }) {
     console.log(posts);
 
     return (
-        <div>
-            <h1>Blogs Index Page!!</h1>
+        <article className="container pt-12">
+            <h1 className="mt-0">Blogs Index Page!!</h1>
             {
                 posts.map( (post) => (
                     <article key={post.id}>
@@ -15,7 +15,7 @@ export default function BlogIndexPage({ data }) {
                     </article>
                 ))
             }
-        </div>
+        </article>
     );
 }
 
