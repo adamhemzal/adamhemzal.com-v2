@@ -1,10 +1,10 @@
 [
-    {"name": "React", "icon": "react"},
-    {"name": "Node", "icon": "node"},
-    {"name": "Gatsby", "icon": "gatsby"},
-    {"name": "WordPress", "icon": "wordpress"},
-    {"name": "Sass", "icon": "sass"},
-    {"name": "Gulp", "icon": "gulp"},
-    {"name": "LeafletJS", "icon": "leaflet"},
-    {"name": "AdobeCC", "icon": "adobe"}
+    {"name": "React", "icon": "react", "link": "https://reactjs.org/"},
+    {"name": "Node", "icon": "node", "link": "https://nodejs.org/en/"},
+    {"name": "Gatsby", "icon": "gatsby", "link": "https://www.gatsbyjs.com/"},
+    {"name": "WordPress", "icon": "wordpress", "link": "https://wordpress.org/"},
+    {"name": "Sass", "icon": "sass", "link": "https://sass-lang.com/"},
+    {"name": "Gulp", "icon": "gulp", "link": "https://gulpjs.com/"},
+    {"name": "LeafletJS", "icon": "leaflet", "link": "https://leafletjs.com/"},
+    {"name": "AdobeCC", "icon": "adobe", "link": "https://www.adobe.com/ca/creativecloud.html"}
 ]

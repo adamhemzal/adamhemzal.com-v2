@@ -8,10 +8,10 @@
 
 /* Mobile Navigation */
 .nav__mobile {
-    @apply h-screen w-screen absolute z-10 backdrop-blur-md bg-colorWhite bg-opacity-75 top-16 inset-x-0 justify-start flex-col font-light border-t-2 border-colorGrayLight md:hidden;
+    @apply h-screen w-screen absolute z-10 backdrop-blur-md bg-colorWhite bg-opacity-75 top-16 inset-x-0 justify-start flex-col font-light border-t-2 border-colorGrayLight divide-y divide-solid divide-colorGrayMedium md:hidden;
 
     .nav__link {
-        @apply inline-block text-center w-full py-6 hover:bg-colorOrangeLight focus:bg-colorOrangeLight;
+        @apply inline-block text-center w-full py-6 hover:bg-colorOrangeLight focus:bg-colorOrangeLight active:bg-colorOrangeLight;
     }
 
     .nav__link-active {
@@ -24,7 +24,7 @@
     @apply hidden font-light md:flex;
 
     .nav__link {
-        @apply inline-block w-full px-2.5 hover:text-colorOrange;
+        @apply inline-block w-full px-2.5 hover:text-colorOrange focus:text-colorOrange active:text-colorOrange;
     }
 
     .nav__link-active {

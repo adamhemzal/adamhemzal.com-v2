@@ -7,7 +7,7 @@ export default function BlogIndexPage({ data }) {
 
     return (
         <article className="container pt-12">
-            <h1 className="mt-0">Blogs Index Page!!</h1>
+            <h1 className="">Blogs Index Page!!</h1>
             {
                 posts.map( (post) => (
                     <article key={post.id}>

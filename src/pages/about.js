@@ -1,9 +1,10 @@
 import React from "react";
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function AboutPage() {
     return (
         <article className="container pt-12">
-            <h1 className="mt-0">About me</h1>
+            <h1 className="">About me</h1>
             <h2></h2>
             <p>
                 Hi, my name is Adam and I'm a Czech currently living in Vancouver, Canada. I love being creative and express myself through design, code and writing. I enjoy software engineering because it allows me to blend engineering with design and build beautiful & useful things for people.

@@ -5,18 +5,16 @@ import { ArrowDown } from "../icons/ArrowDown";
 import ButtonLink from "../components/ButtonLink";
 import PostLink from "../components/PostLink";
 import ProjectCard from "../components/ProjectCard";
+import SkillCard from "../components/SkillCard";
 
 export default function WebIndexPage({ data }) {
-  console.log(data);
   const { posts, projects, skills } = data;
 
-  //console.log("posts here:", posts);
-  //console.log("skills", skills);
   return (
     <article className="container pt-12">
-      <header className="grid grid-cols-1 gap-4 mb-6 lg:grid-cols-12">
+      <header className="grid grid-cols-1 gap-x-6 mb-6 lg:grid-cols-12">
           <div className="lg:col-span-6">
-            <h1 className="font-bold mb-4 mt-0">Hey, I'm Adam</h1>
+            <h1 className="font-bold mb-4">Hey, I'm Adam</h1>
             <h2 className="font-light mb-6 mt-0 text-h3">Software Developer with the focus on Front-End, UX & Web 3.0</h2>
             <p>
               I help people and brands reach their goals by designing & building user-centric digital products and interactive experiences
@@ -57,7 +55,7 @@ export default function WebIndexPage({ data }) {
       <section>
           <h2 className="font-bold">Selected Projects</h2>
           <ButtonLink path="#allProjects">All Projects</ButtonLink>
-          <div className="grid gap-4">
+          <div className="grid grid-cols-1 gap-x-6 my-4 md:grid-cols-12">
             {
               projects.nodes.map( (project) => {
                 let image = getImage(project.frontmatter.logo);
@@ -84,10 +82,16 @@ export default function WebIndexPage({ data }) {
       <section>
           <h2 className="font-bold">Skills & Tools</h2>
           <ButtonLink path="/about">All Skills</ButtonLink>
-
-          {
-
-          }
+          <div className="grid grid-cols-2 gap-6 my-4 sm:grid-cols-4 lg:grid-cols-8"> 
+            {
+              skills.nodes.map( (skill) => (
+                <SkillCard 
+                  name={skill.name}
+                  icon={skill.icon}
+                />
+              ))
+            }
+          </div>
 
       </section>
       
@@ -107,7 +111,7 @@ query IndexQuery {
         slug
         title
         category
-        created(formatString: "MMM DD, YYYY")
+        created(formatString: "MMM DD YYYY")
       }
     }
   }
