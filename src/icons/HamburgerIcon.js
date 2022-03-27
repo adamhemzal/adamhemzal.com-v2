@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export const HamburgerIcon = ({ customClass }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={customClass} viewBox="0 0 512 512">
@@ -12,4 +12,4 @@ export const HamburgerIcon = ({ customClass }) => (
       d="M80 160h352M80 256h352M80 352h352"
     />
   </svg>
-)
+);

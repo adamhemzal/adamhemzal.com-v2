@@ -85,9 +85,11 @@ export default function WebIndexPage({ data }) {
           <div className="grid grid-cols-2 gap-6 my-4 sm:grid-cols-4 lg:grid-cols-8"> 
             {
               skills.nodes.map( (skill) => (
-                <SkillCard 
+                <SkillCard
+                  key={skill.name} 
                   name={skill.name}
                   icon={skill.icon}
+                  link={skill.link}
                 />
               ))
             }
@@ -141,6 +143,7 @@ query IndexQuery {
     nodes {
       name
       icon
+      link
     }
   }
 
