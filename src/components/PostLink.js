@@ -6,8 +6,8 @@ export default function PostLink({ path, title, created, category, customClass }
     return (
         <Link to={path} className={customClass}>
             <article className="postLink">
-                <p className="font-medium m-0 text-body md:text-button">{title}</p>
-                <p className="m-0 text-small text-center md:text-body">
+                <p className="title">{title}</p>
+                <p className="cat-date">
                     <CategoryTag customClass="hidden md:inline-block">{category}</CategoryTag>
                     {created}
                 </p>

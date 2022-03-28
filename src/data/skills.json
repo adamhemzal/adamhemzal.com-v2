@@ -38,6 +38,41 @@
     "name": "AdobeCC",
     "icon": "adobe",
     "link": "https://www.adobe.com/ca/creativecloud.html"
+  },
+  {
+    "name": "HTML",
+    "icon": "html",
+    "link": "https://www.adobe.com/ca/creativecloud.html"
+  },
+  {
+    "name": "CSS",
+    "icon": "css",
+    "link": "https://www.adobe.com/ca/creativecloud.html"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "javascript",
+    "link": "https://www.adobe.com/ca/creativecloud.html"
+  },
+  {
+    "name": "SQL",
+    "icon": "sql",
+    "link": "https://www.adobe.com/ca/creativecloud.html"
+  },
+  {
+    "name": "AWS",
+    "icon": "aws",
+    "link": "https://www.adobe.com/ca/creativecloud.html"
+  },
+  {
+    "name": "PowerBI",
+    "icon": "powerbi",
+    "link": "https://www.adobe.com/ca/creativecloud.html"
+  },
+  {
+    "name": ".NET Core",
+    "icon": "netcore",
+    "link": "https://www.adobe.com/ca/creativecloud.html"
   }
   
 ]

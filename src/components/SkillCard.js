@@ -44,7 +44,7 @@ export default function SkillCard({ name, icon, link, customClass }) {
     return (
         <a href={link} rel="noopener noreferrer" target="_blank" className={`skill-card ${customClass}`}>
             {selectedIcon}
-            <p className="font-medium text-small mt-2 mb-2">{name}</p>
+            <p className="name">{name}</p>
         </a>
     );
 }

@@ -4,4 +4,8 @@
     .image-svg {
         @apply block w-12 h-12;
     }
+
+    .name {
+        @apply font-medium text-small mt-2 mb-2;
+    }
 }

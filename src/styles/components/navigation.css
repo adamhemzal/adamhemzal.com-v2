@@ -6,6 +6,10 @@
     @apply inline-block w-12 md:hidden;
 }
 
+.nav__title {
+    @apply inline-block font-medium hover:text-colorOrange;
+}
+
 /* Mobile Navigation */
 .nav__mobile {
     @apply h-screen w-screen absolute z-10 backdrop-blur-md bg-colorWhite bg-opacity-75 top-16 inset-x-0 justify-start flex-col font-light border-t-2 border-colorGrayLight divide-y divide-solid divide-colorGrayMedium md:hidden;

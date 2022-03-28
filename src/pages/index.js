@@ -12,7 +12,7 @@ export default function WebIndexPage({ data }) {
 
   return (
     <article className="container pt-12">
-      <header className="grid grid-cols-1 gap-x-6 mb-6 lg:grid-cols-12">
+      <header className="grid grid-cols-1 gap-x-6 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <h1 className="font-bold mb-4">Hey, I'm Adam</h1>
             <h2 className="font-light mb-6 mt-0 text-h3">Software Developer with the focus on Front-End, UX & Web 3.0</h2>
@@ -31,14 +31,16 @@ export default function WebIndexPage({ data }) {
               src="../images/adam-hemzal-drawing-optimized.png"
             />
           </div>
-          <div className="lg:col-span-12 my-5">
+          <div className="lg:col-span-12 mt-10">
             <ArrowDown customClass="w-11 mx-auto hover:animate-bounce" />
           </div>
       </header>
 
-      <section>
+      <section className="py-4">
+        <div className="flex flex-row justify-between items-center">
           <h2 className="font-bold">Latest Articles</h2>
-          <ButtonLink path="#allarticles">All Articles</ButtonLink>
+          <ButtonLink path="#allarticles" customClass="button__small">All Articles</ButtonLink>
+        </div>
           {
             posts.nodes.map( (post) => (
               <PostLink 
@@ -52,10 +54,13 @@ export default function WebIndexPage({ data }) {
           }
       </section>
 
-      <section>
-          <h2 className="font-bold">Selected Projects</h2>
-          <ButtonLink path="#allProjects">All Projects</ButtonLink>
-          <div className="grid grid-cols-1 gap-x-6 my-4 md:grid-cols-12">
+      <section className="py-4">
+          <div className="flex flex-row justify-between items-center">
+            <h2 className="font-bold">Selected Projects</h2>
+            <ButtonLink path="#allProjects" customClass="button__small">All Projects</ButtonLink>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 my-4 md:grid-cols-12">
             {
               projects.nodes.map( (project) => {
                 let image = getImage(project.frontmatter.logo);
@@ -79,9 +84,11 @@ export default function WebIndexPage({ data }) {
           </div>
       </section>
       
-      <section>
+      <section className="py-4">
+        <div className="flex flex-row justify-between items-center">
           <h2 className="font-bold">Skills & Tools</h2>
-          <ButtonLink path="/about">All Skills</ButtonLink>
+          <ButtonLink path="/about" customClass="button__small">All Skills</ButtonLink>
+        </div>
           <div className="grid grid-cols-2 gap-6 my-4 sm:grid-cols-4 lg:grid-cols-8"> 
             {
               skills.nodes.map( (skill) => (
@@ -94,14 +101,12 @@ export default function WebIndexPage({ data }) {
               ))
             }
           </div>
-
       </section>
-      
     </article>
   );
 }
 
-export const pageQuery = graphql`
+export const query = graphql`
 query IndexQuery {
   posts: allMarkdownRemark(
     limit: 7
@@ -139,7 +144,9 @@ query IndexQuery {
       }
     }
   }
-  skills: allSkillsJson {
+  skills: allSkillsJson(
+    limit: 8
+  ) {
     nodes {
       name
       icon

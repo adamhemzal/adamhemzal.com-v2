@@ -31,7 +31,7 @@ export default function Navigation() {
         <nav className="nav-container" role="navigation">
             <h2 className="sr-only">Main Navigation</h2>
             
-            <Link to="/" className="inline-block font-medium hover:text-colorOrange">Adam Hemzal</Link>
+            <Link to="/" className="nav__title">Adam Hemzal</Link>
 
             {/* Mobile Menu */}
             <div className="nav__mobile-menu" role="button" tabIndex="0" onClick={handleMenu} onKeyPress={handleMenu}>

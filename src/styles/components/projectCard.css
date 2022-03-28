@@ -23,7 +23,7 @@
 }
 
 .project-card__button {
-    @apply inline-block font-light border-2 border-colorBlack py-1.5 px-7 text-body rounded hover:shadow-lg hover:scale-105 transition;
+    @apply inline-block font-light border-2 border-colorBlack py-1.5 px-7 text-small rounded hover:shadow-lg hover:scale-105 transition;
 }
 
 .project-card__button-dark {

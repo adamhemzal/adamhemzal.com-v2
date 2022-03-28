@@ -1,5 +1,6 @@
 [
-    { "url": "...", "label": "...", "icon": "..."},
-    { "url": "...", "label": "...", "icon": "..."},
-    { "url": "...", "label": "...", "icon": "..."}
+    { "url": "email", "label": "Email", "icon": "email"},
+    { "url": "twitter", "label": "Twitter", "icon": "twitter"},
+    { "url": "github", "label": "GitHub", "icon": "gitub"},
+    { "url": "rss", "label": "RSS", "icon": "rss"}
 ]

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import PostLink from "../components/PostLink";
 
 export default function BlogIndexPage({ data }) {
     const posts = data.allMarkdownRemark.nodes;
@@ -7,19 +8,25 @@ export default function BlogIndexPage({ data }) {
 
     return (
         <article className="container pt-12">
-            <h1 className="">Blogs Index Page!!</h1>
-            {
-                posts.map( (post) => (
-                    <article key={post.id}>
-                        <h2><Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link></h2>
-                    </article>
-                ))
-            }
+          <header>
+            <h1 className="">Articles</h1>
+          </header>
+          {
+              posts.map( (post) => (
+                <PostLink 
+                  key={post.id}
+                  path={post.frontmatter.slug} 
+                  title={post.frontmatter.title}
+                  category={post.frontmatter.category}
+                  created={post.frontmatter.created}
+                />
+              ))
+          }
         </article>
     );
 }
 
-export const pageQuery = graphql`
+export const query = graphql`
 query BlogQuery {
     site {
       siteMetadata {
@@ -38,7 +45,7 @@ query BlogQuery {
           language
           tags
           type
-          created(formatString: "MMM DD, YYYY")
+          created(formatString: "MMM DD YYYY")
         }
         id
         headings(depth: h1) {

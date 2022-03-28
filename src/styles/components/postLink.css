@@ -1,5 +1,13 @@
 .postLink {
-    @apply flex justify-between items-center border border-colorGrayLight py-5 px-6 my-6 shadow-md rounded transition hover:border-colorOrange;
+    @apply flex justify-between items-center border border-colorGrayLight py-4 px-6 my-5 shadow-md rounded transition hover:border-colorOrange;
+
+    .title {
+        @apply font-medium m-0 text-body md:text-button;
+    }
+
+    .cat-date {
+        @apply m-0 text-small text-center;
+    }
 }
 
 .postLink__new {
