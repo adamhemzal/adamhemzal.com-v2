@@ -4,24 +4,24 @@ module.exports = {
   theme: {
     // Add custom colors
     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      colorBlack: '#2B3342',
-      colorWhite: '#FFF',
-      colorGrayLight: '#F3F3F3',
-      colorGrayMedium: '#CCCCCC',
-      colorGrayDark: '#A2A2A2',
-      colorOrangeLight: '#F5E6CA',
-      colorOrange: '#FB9300',
+      'transparent': 'transparent',
+      'current': 'currentColor',
+      'colorBlack': '#2B3342',
+      'colorWhite': '#FFF',
+      'colorGrayLight': '#F3F3F3',
+      'colorGrayMedium': '#CCCCCC',
+      'colorGrayDark': '#A2A2A2',
+      'colorOrangeLight': '#F5E6CA',
+      'colorOrange': '#FB9300',
     },
     // Add custom font family
     fontFamily: {
       'sans': ['Lexend Deca', 'Arial', 'sans-serif'],
     },
     fontWeight: {
-      light: 300,
-      medium: 500,
-      bold: 700,
+      'light': 300,
+      'medium': 500,
+      'bold': 700,
     },
     screens: {
       'sm': '576px',
@@ -30,8 +30,8 @@ module.exports = {
       'xl': '1200px',
     },
     container: {
-      center: true,
-      padding: '1rem',
+      'center': true,
+      'padding': '1rem',
     },
     extend: {
       fontSize: {
@@ -44,6 +44,9 @@ module.exports = {
         'button': '1.155em',
         'small': '0.85rem',
         'small2x': '0.75rem',
+      },
+      backgroundImage: {
+        'footer-pattern': "url('/src/images/pipes.png')",
       }
     },
   },

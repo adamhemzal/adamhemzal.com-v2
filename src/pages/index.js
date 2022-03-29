@@ -14,8 +14,8 @@ export default function WebIndexPage({ data }) {
     <article className="container pt-12">
       <header className="grid grid-cols-1 gap-x-6 lg:grid-cols-12">
           <div className="lg:col-span-6">
-            <h1 className="font-bold mb-4">Hey, I'm Adam</h1>
-            <h2 className="font-light mb-6 mt-0 text-h3">Software Developer with the focus on Front-End, UX & Web 3.0</h2>
+            <h1>Hey, I'm Adam</h1>
+            <h2 className="font-light text-h3">Software Developer with the focus on Front-End, UX & Web 3.0</h2>
             <p>
               I help people and brands reach their goals by designing & building user-centric digital products and interactive experiences
             </p>

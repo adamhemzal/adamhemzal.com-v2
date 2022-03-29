@@ -5,6 +5,8 @@
 
 /* BASE */
 @import "./base/global";
+@import "./base/lists";
+@import "./base/anchors";
 
 /* TEMPLATES */
 @import "./templates/post";

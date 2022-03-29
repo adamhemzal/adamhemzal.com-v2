@@ -1,13 +1,28 @@
 import React from "react";
 import { Link } from "gatsby";
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function NotFoundPage() {
     return (
         <article className="container pt-12">
-            <h1>404 Page not found</h1>
-            <h2>Oops! The page you're looking for does not exist.</h2>
-            <p>Please try to go back home or try different page</p>
-            <Link to="/">Go back</Link>
+            <section>
+                    <h1>404 Not Found</h1>
+                    <h2 className="font-light mt-0">This page does not exist.</h2>
+            </section>
+            <section>
+                <ul>
+                    <li>
+                        <Link to="/blog">Articles</Link>
+                    </li>
+                    <li>
+                        <Link to="/projects">Projects</Link>
+                    </li>
+                    <li>
+                        <Link to="/">Go back home</Link>
+                    </li>
+                </ul>
+            </section>
+
         </article>
     );
 }

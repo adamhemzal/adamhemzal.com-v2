@@ -7,15 +7,19 @@
 }
 
 .nav__title {
-    @apply inline-block font-medium hover:text-colorOrange;
+    @apply inline-block font-medium border-0 hover:text-colorOrange hover:bg-transparent;
 }
 
 /* Mobile Navigation */
 .nav__mobile {
-    @apply h-screen w-screen absolute z-10 backdrop-blur-md bg-colorWhite bg-opacity-75 top-16 inset-x-0 justify-start flex-col font-light border-t-2 border-colorGrayLight divide-y divide-solid divide-colorGrayMedium md:hidden;
+    @apply h-screen w-screen absolute z-10 p-0 m-0 backdrop-blur-md bg-colorWhite bg-opacity-75 top-16 inset-x-0 justify-start flex-col font-light border-t-2 border-colorGrayLight divide-y divide-solid divide-colorGrayMedium list-none list-outside md:hidden;
+
+    li {
+        @apply m-0;
+    }
 
     .nav__link {
-        @apply inline-block text-center w-full py-6 hover:bg-colorOrangeLight focus:bg-colorOrangeLight active:bg-colorOrangeLight;
+        @apply inline-block text-center w-full py-6 border-0 font-light hover:bg-colorOrangeLight focus:bg-colorOrangeLight active:bg-colorOrangeLight;
     }
 
     .nav__link-active {
@@ -25,10 +29,14 @@
 
 /* Desktop Navigation */
 .nav__desktop {
-    @apply hidden font-light md:flex;
+    @apply hidden font-light m-0 p-0 list-none list-outside md:flex;
+
+    li {
+        @apply m-0;
+    }
 
     .nav__link {
-        @apply inline-block w-full px-2.5 hover:text-colorOrange focus:text-colorOrange active:text-colorOrange;
+        @apply inline-block w-full px-2.5 border-0 font-light hover:text-colorOrange hover:bg-transparent focus:text-colorOrange active:text-colorOrange;
     }
 
     .nav__link-active {

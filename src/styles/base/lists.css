@@ -1,0 +1,15 @@
+ul {
+    @apply list-disc list-inside pl-2 mb-6;
+    
+    li {
+        @apply mb-1;
+    }
+}
+
+ol {
+    @apply list-decimal list-inside pl-2 mb-6;
+
+    li {
+        @apply mb-1;
+    }
+}

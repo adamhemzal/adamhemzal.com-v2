@@ -35,6 +35,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            // add anchor links to headers
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `100`,
+            },
+          },
+          {
             // handling images in markdown 
             resolve: `gatsby-remark-images`,
             options: {

@@ -9,19 +9,25 @@ export default function BlogIndexPage({ data }) {
     return (
         <article className="container pt-12">
           <header>
-            <h1 className="">Articles</h1>
+            <h1>Articles</h1>
+            <h2 className="font-light text-h3">Latest thoughts, tips and tutorials</h2>
           </header>
-          {
-              posts.map( (post) => (
-                <PostLink 
-                  key={post.id}
-                  path={post.frontmatter.slug} 
-                  title={post.frontmatter.title}
-                  category={post.frontmatter.category}
-                  created={post.frontmatter.created}
-                />
-              ))
-          }
+          <section>
+            
+          </section>
+          <section className="mt-10 mb-4">
+            {
+                posts.map( (post) => (
+                  <PostLink 
+                    key={post.id}
+                    path={post.frontmatter.slug} 
+                    title={post.frontmatter.title}
+                    category={post.frontmatter.category}
+                    created={post.frontmatter.created}
+                  />
+                ))
+            }
+          </section>
         </article>
     );
 }
