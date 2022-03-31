@@ -1,19 +1,34 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
+import { getImage } from 'gatsby-plugin-image';
+import ProjectCard from "../components/ProjectCard";
 
 export default function ProjectsIndexPage({ data }) {
     const projects = data.allMarkdownRemark.nodes;
-    console.log(projects);
     return (
         <article className="container pt-12">
             <header>
                 <h1>Projects</h1>
             </header>
-            {
-                projects.map( (project) => (
-                    <p>{project.frontmatter.title}</p>
-                ))
-            }
+            <section className="grid grid-cols-1 gap-6 my-4 md:grid-cols-12">
+              {
+                projects.map( (project) => {
+                  let image = getImage(project.frontmatter.logo);
+                  return(
+                    <ProjectCard 
+                      key={project.frontmatter.slug}
+                      path={project.frontmatter.slug}
+                      title={project.frontmatter.title}
+                      description={project.frontmatter.description}
+                      website={project.frontmatter.website}
+                      logo={image}
+                      duration={project.frontmatter.duration}
+                      customClass=""
+                    />
+                  )
+                })
+              }
+            </section>
         </article>
     );
 }
@@ -26,12 +41,8 @@ query ProjectQuery {
     ) {
       nodes {
         frontmatter {
-          type
-          tools
-          title
           slug
-          last_update
-          created
+          title
           logo {
             childImageSharp {
               gatsbyImageData

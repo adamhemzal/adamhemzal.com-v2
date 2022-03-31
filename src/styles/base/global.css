@@ -23,7 +23,12 @@ h1, h2, h3, h4, h5 {
     font-weight: theme('fontWeight.bold');
     line-height: 1.25;
     /* margin: 2.85rem 0 1.38rem; */
-    margin: 1.55rem 0 1.18rem
+    margin: 1.55rem 0 1.18rem;
+
+    /* Removeing border from gtasby-remark-autolink-header */
+    a {
+        border: 0; 
+    }
 }
 
 h1 {

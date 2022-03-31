@@ -1,5 +1,5 @@
 .skill-card {
-    @apply flex flex-col justify-between items-center shadow-md rounded text-center col-span-1 py-5 px-3 border border-colorGrayLight hover:scale-105 transition;
+    @apply flex flex-col justify-between items-center shadow-md rounded text-center col-span-1 py-5 px-3 border border-colorGrayLight hover:bg-colorWhite hover:scale-105 transition;
 
     .image-svg {
         @apply block w-12 h-12;

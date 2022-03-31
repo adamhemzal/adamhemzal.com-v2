@@ -4,10 +4,10 @@ import { graphql } from "gatsby";
 export default function PostTemplate({ data }) {
   const result = data.markdownRemark;
   const { html } = data.markdownRemark;
-console.log(result);
+  console.log(result);
     return (
       <article
-        className="container pt-12 blog-post-content"
+        className="container pt-12 post-container"
         dangerouslySetInnerHTML={{ __html: html }}
       />
     )

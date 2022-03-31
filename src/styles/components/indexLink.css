@@ -1,0 +1,7 @@
+.index-link {
+    @apply inline-flex justify-center text-button items-center w-full border-0 hover:bg-transparent;
+}
+
+.index-link__icon {
+    @apply w-6 ml-4 inline-block;
+}

@@ -1,6 +1,5 @@
 [
-    { "url": "email", "label": "Email", "icon": "email"},
-    { "url": "twitter", "label": "Twitter", "icon": "twitter"},
-    { "url": "github", "label": "GitHub", "icon": "gitub"},
-    { "url": "rss", "label": "RSS", "icon": "rss"}
+    { "url": "mailto:adam.hemzal@gmail.com", "label": "Email"},
+    { "url": "https://ca.linkedin.com/in/adam-hemzal", "label": "LinkedIn"},
+    { "url": "https://github.com/adamhemzal", "label": "GitHub"}
 ]

@@ -1,0 +1,11 @@
+blockquote {
+    @apply bg-colorGrayLight border border-colorGrayMedium rounded-md p-6 border-l-8 border-l-colorOrange;
+
+    p {
+        @apply mb-3 mt-0;
+    }
+    p:last-of-type,
+    ul:last-of-type {
+        @apply mb-0;
+    }
+}

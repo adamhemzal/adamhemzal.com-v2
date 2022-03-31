@@ -7,7 +7,7 @@
 }
 
 .nav__title {
-    @apply inline-block font-medium border-0 hover:text-colorOrange hover:bg-transparent;
+    @apply inline-block text-colorBlack font-medium border-0 transition hover:text-colorOrange hover:bg-transparent;
 }
 
 /* Mobile Navigation */
@@ -19,7 +19,7 @@
     }
 
     .nav__link {
-        @apply inline-block text-center w-full py-6 border-0 font-light hover:bg-colorOrangeLight focus:bg-colorOrangeLight active:bg-colorOrangeLight;
+        @apply inline-block text-center w-full py-6 border-0 font-light text-colorBlack transition hover:bg-colorOrangeLight focus:bg-colorOrangeLight active:bg-colorOrangeLight;
     }
 
     .nav__link-active {
@@ -36,7 +36,7 @@
     }
 
     .nav__link {
-        @apply inline-block w-full px-2.5 border-0 font-light hover:text-colorOrange hover:bg-transparent focus:text-colorOrange active:text-colorOrange;
+        @apply inline-block w-full px-2.5 border-0 font-light transition text-colorBlack hover:text-colorOrange hover:bg-transparent focus:text-colorOrange active:text-colorOrange;
     }
 
     .nav__link-active {

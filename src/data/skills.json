@@ -30,9 +30,9 @@
     "link": "https://gulpjs.com/"
   },
   { 
-      "name": "LeafletJS", 
-      "icon": "leaflet", 
-      "link": "https://leafletjs.com/"
+    "name": "LeafletJS", 
+    "icon": "leaflet", 
+    "link": "https://leafletjs.com/"
   },
   {
     "name": "AdobeCC",
@@ -40,39 +40,29 @@
     "link": "https://www.adobe.com/ca/creativecloud.html"
   },
   {
-    "name": "HTML",
-    "icon": "html",
-    "link": "https://www.adobe.com/ca/creativecloud.html"
-  },
-  {
-    "name": "CSS",
-    "icon": "css",
-    "link": "https://www.adobe.com/ca/creativecloud.html"
-  },
-  {
-    "name": "JavaScript",
-    "icon": "javascript",
-    "link": "https://www.adobe.com/ca/creativecloud.html"
-  },
-  {
-    "name": "SQL",
-    "icon": "sql",
-    "link": "https://www.adobe.com/ca/creativecloud.html"
+    "name": "MySQL",
+    "icon": "mysql",
+    "link": "https://www.mysql.com/"
   },
   {
     "name": "AWS",
     "icon": "aws",
-    "link": "https://www.adobe.com/ca/creativecloud.html"
+    "link": "https://aws.amazon.com/"
+  },
+  {
+    "name": "TailwindCSS",
+    "icon": "tailwind",
+    "link": "https://tailwindcss.com/"
   },
   {
     "name": "PowerBI",
     "icon": "powerbi",
-    "link": "https://www.adobe.com/ca/creativecloud.html"
+    "link": "https://powerbi.microsoft.com/"
   },
   {
     "name": ".NET Core",
     "icon": "netcore",
-    "link": "https://www.adobe.com/ca/creativecloud.html"
+    "link": "https://dotnet.microsoft.com/en-us/"
   }
   
 ]

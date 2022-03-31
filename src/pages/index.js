@@ -1,8 +1,9 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { StaticImage, getImage } from 'gatsby-plugin-image';
 import { ArrowDown } from "../icons/ArrowDown";
 import ButtonLink from "../components/ButtonLink";
+import IndexLink from "../components/IndexLink";
 import PostLink from "../components/PostLink";
 import ProjectCard from "../components/ProjectCard";
 import SkillCard from "../components/SkillCard";
@@ -37,27 +38,26 @@ export default function WebIndexPage({ data }) {
       </header>
 
       <section className="py-4">
-        <div className="flex flex-row justify-between items-center">
-          <h2 className="font-bold">Latest Articles</h2>
-          <ButtonLink path="#allarticles" customClass="button__small">All Articles</ButtonLink>
-        </div>
-          {
-            posts.nodes.map( (post) => (
-              <PostLink 
-                key={post.frontmatter.slug}
-                path={`blog/${post.frontmatter.slug}`} 
-                title={post.frontmatter.title}
-                category={post.frontmatter.category}
-                created={post.frontmatter.created}
-              /> 
-            ))
-          }
+        <h2 className="font-bold">Latest Articles</h2>
+        {
+          posts.nodes.map( (post) => (
+            <PostLink 
+              key={post.frontmatter.slug}
+              path={`blog/${post.frontmatter.slug}`} 
+              title={post.frontmatter.title}
+              category={post.frontmatter.category}
+              created={post.frontmatter.created}
+            /> 
+          ))
+        }
+        <IndexLink path="/blog" customClass="mt-14 mb-5">All Articles</IndexLink>
       </section>
+      
+
 
       <section className="py-4">
           <div className="flex flex-row justify-between items-center">
             <h2 className="font-bold">Selected Projects</h2>
-            <ButtonLink path="#allProjects" customClass="button__small">All Projects</ButtonLink>
           </div>
 
           <div className="grid grid-cols-1 gap-6 my-4 md:grid-cols-12">
@@ -82,26 +82,29 @@ export default function WebIndexPage({ data }) {
               })
             }
           </div>
+          <IndexLink path="/projects" customClass="mt-14 mb-5">All Projects</IndexLink>
       </section>
       
+      
+
       <section className="py-4">
-        <div className="flex flex-row justify-between items-center">
-          <h2 className="font-bold">Skills & Tools</h2>
-          <ButtonLink path="/about" customClass="button__small">All Skills</ButtonLink>
+        <h2 className="font-bold">Skills & Tools</h2>
+        <div className="grid grid-cols-2 gap-6 my-4 sm:grid-cols-4 lg:grid-cols-8"> 
+          {
+            skills.nodes.map( (skill) => (
+              <SkillCard
+                key={skill.name} 
+                name={skill.name}
+                icon={skill.icon}
+                link={skill.link}
+              />
+            ))
+          }
         </div>
-          <div className="grid grid-cols-2 gap-6 my-4 sm:grid-cols-4 lg:grid-cols-8"> 
-            {
-              skills.nodes.map( (skill) => (
-                <SkillCard
-                  key={skill.name} 
-                  name={skill.name}
-                  icon={skill.icon}
-                  link={skill.link}
-                />
-              ))
-            }
-          </div>
+        <IndexLink path="/about#skills" customClass="mt-14 mb-5">All Skills</IndexLink>
       </section>
+      
+      
     </article>
   );
 }

@@ -7,6 +7,8 @@
 @import "./base/global";
 @import "./base/lists";
 @import "./base/anchors";
+@import "./base/blockquote";
+@import "./base/pre";
 
 /* TEMPLATES */
 @import "./templates/post";
@@ -15,7 +17,9 @@
 /* COMPONENTS */
 @import "./components/header";
 @import "./components/navigation";
+@import "./components/footer";
 @import "./components/buttonLink";
+@import "./components/indexLink";
 @import "./components/postLink";
 @import "./components/categoryTag";
 @import "./components/projectCard";
