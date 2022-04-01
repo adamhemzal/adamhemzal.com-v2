@@ -9,6 +9,7 @@
 @import "./base/anchors";
 @import "./base/blockquote";
 @import "./base/pre";
+@import "./base/table";
 
 /* TEMPLATES */
 @import "./templates/post";

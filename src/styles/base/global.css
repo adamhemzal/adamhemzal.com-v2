@@ -69,3 +69,7 @@ blockquote, ol, p, table, ul {
     font-size: theme('fontSize.body');
 }
 
+strong {
+    font-weight: theme('fontWeight.bold');
+}
+

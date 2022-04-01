@@ -1,10 +1,13 @@
 ---
 slug: "article-1"
-title: "How to create react architecture Article 1"
-description: "Some kind of description in the article here for SEO purpose"
+title: "Title of article 1"
+description: "Description of article 1"
 thumbnail: "./TFSA-RRSP.png"
-category: "test2"
-tags: ["trollo", "putin", "meat"]
+category: "category 1"
+tags: 
+    - "tag1"
+    - "tag2"
+    - "tag3"
 language: "en"
 type: "article"
 created: "2022-03-09"

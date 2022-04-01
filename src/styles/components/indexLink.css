@@ -1,5 +1,5 @@
 .index-link {
-    @apply inline-flex justify-center text-button items-center w-full border-0 hover:bg-transparent;
+    @apply inline-flex justify-center text-button items-center w-full border-0 hover:bg-transparent hover:text-colorBlack;
 }
 
 .index-link__icon {

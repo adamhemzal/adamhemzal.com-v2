@@ -39,7 +39,7 @@
     @apply text-center;
 
     p {
-        @apply text-colorWhite text-small2x m-0 py-6;
+        @apply text-colorWhite text-small m-0 py-6;
     }
 
     a {

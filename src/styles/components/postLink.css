@@ -1,5 +1,5 @@
 .postLink {
-    @apply flex justify-between items-center border border-colorGrayLight py-4 px-6 my-5 shadow-md rounded transition hover:border-colorOrange;
+    @apply flex justify-between items-center border border-colorGrayLight py-4 px-6 my-5 shadow-md rounded transition hover:border-colorOrange hover:text-colorBlack hover:bg-transparent;
 
     .title {
         @apply font-medium m-0 text-body md:text-button;

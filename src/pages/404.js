@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 export default function NotFoundPage() {
     return (
-        <article className="container pt-12">
+        <article className="container py-12">
             <section>
                     <h1>404 Not Found</h1>
                     <h2 className="font-light mt-0">This page does not exist.</h2>

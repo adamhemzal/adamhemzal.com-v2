@@ -5,6 +5,7 @@ export default function PostTemplate({ data }) {
   const result = data.markdownRemark;
   const { html } = data.markdownRemark;
   console.log(result);
+  
     return (
       <article
         className="container pt-12 post-container"

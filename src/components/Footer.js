@@ -34,9 +34,9 @@ export default function Footer() {
     const resource = data.resource.nodes;
 
     return (
-        <footer className="footer-container" id="contact">
+        <footer className="footer-container">
             <h2 className="sr-only">Footer</h2>
-            <section className="footer__bgImage">
+            <section className="footer__bgImage" id="contact">
                 <div className="container grid gap-6 grid-cols-1 lg:grid-cols-2">
                     <div className="footer__work">
                         <h2>In need of a developer?</h2>
@@ -47,7 +47,7 @@ export default function Footer() {
                             <span className="pulsing-circle"></span>
                             I'm currently available for work.
                         </p>
-                        <a href="mailto:" className="button button__dark">Send a message</a>
+                        <a href="mailto:adam.hemzal@gmail.com" className="button button__dark">Send a message</a>
                     </div>
                     <div className="footer__testimonial">
                         <p>Testimonial here</p>

@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 export default function AboutPage() {
     return (
-        <article className="container pt-12">
+        <article className="container py-12">
             <header className="grid grid-cols-1 gap-6 md:grid-cols-12">
                 <div className="md:col-span-7 text-justify">
                     <h1 className="">About me</h1>

@@ -1,10 +1,13 @@
 ---
 slug: "article-2"
-title: "Article2"
-description: "what do you think this article 2 is all about?"
+title: "Title of article 2"
+description: "Description of article 2"
 thumbnail: "./"
-category: "test"
-tags: ["trollo", "putin", "meat"]
+category: "category 2"
+tags: 
+    - "tag1"
+    - "tag2"
+    - "tag3"
 language: "en"
 type: "article"
 created: "2022-03-12"

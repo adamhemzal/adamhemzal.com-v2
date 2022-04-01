@@ -6,7 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 export default function ProjectsIndexPage({ data }) {
     const projects = data.allMarkdownRemark.nodes;
     return (
-        <article className="container pt-12">
+        <article className="container py-12">
             <header>
                 <h1>Projects</h1>
             </header>

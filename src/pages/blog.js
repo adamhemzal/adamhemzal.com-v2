@@ -7,7 +7,7 @@ export default function BlogIndexPage({ data }) {
     console.log(posts);
 
     return (
-        <article className="container pt-12">
+        <article className="container py-12">
           <header>
             <h1>Articles</h1>
             <h2 className="font-light text-h3">Latest thoughts, tips and tutorials</h2>

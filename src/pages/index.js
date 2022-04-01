@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { StaticImage, getImage } from 'gatsby-plugin-image';
 import { ArrowDown } from "../icons/ArrowDown";
 import ButtonLink from "../components/ButtonLink";
@@ -12,7 +12,7 @@ export default function WebIndexPage({ data }) {
   const { posts, projects, skills } = data;
 
   return (
-    <article className="container pt-12">
+    <article className="container py-12">
       <header className="grid grid-cols-1 gap-x-6 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <h1>Hey, I'm Adam</h1>
@@ -21,7 +21,7 @@ export default function WebIndexPage({ data }) {
               I help people and brands reach their goals by designing & building user-centric digital products and interactive experiences
             </p>
             <p className="text-justify">
-              <strong className="font-bold">I love</strong> building projects and write about what I learn and do. This website is my personal digital garden — a place where you can find my notes, thoughts and tutorials on topics like web, design, technology, privacy, crypto, and more.
+              <strong>I love</strong> building projects and write about what I learn and do. This website is my personal digital garden — a place where you can find my notes, thoughts and tutorials on topics like web, design, technology, privacy, crypto, and more.
             </p>
             <ButtonLink path="/projects" customClass="mr-4 button__dark">View projects</ButtonLink>
             <ButtonLink path="/about">More about me</ButtonLink>
@@ -33,12 +33,12 @@ export default function WebIndexPage({ data }) {
             />
           </div>
           <div className="lg:col-span-12 mt-10">
-            <ArrowDown customClass="w-11 mx-auto hover:animate-bounce" />
+            <ArrowDown customClass="w-11 mx-auto" />
           </div>
       </header>
 
       <section className="py-4">
-        <h2 className="font-bold">Latest Articles</h2>
+        <h2>Latest Articles</h2>
         {
           posts.nodes.map( (post) => (
             <PostLink 
@@ -50,17 +50,16 @@ export default function WebIndexPage({ data }) {
             /> 
           ))
         }
-        <IndexLink path="/blog" customClass="mt-14 mb-5">All Articles</IndexLink>
+        <IndexLink path="/blog" customClass="mt-10 mb-5">All Articles</IndexLink>
       </section>
-      
-
+    
 
       <section className="py-4">
           <div className="flex flex-row justify-between items-center">
-            <h2 className="font-bold">Selected Projects</h2>
+            <h2>Selected Projects</h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 my-4 md:grid-cols-12">
+          <div className="grid gap-6 pt-2 grid-cols-1 md:grid-cols-12">
             {
               projects.nodes.map( (project) => {
                 let image = getImage(project.frontmatter.logo);
@@ -83,13 +82,11 @@ export default function WebIndexPage({ data }) {
             }
           </div>
           <IndexLink path="/projects" customClass="mt-14 mb-5">All Projects</IndexLink>
-      </section>
-      
-      
+      </section>   
 
       <section className="py-4">
-        <h2 className="font-bold">Skills & Tools</h2>
-        <div className="grid grid-cols-2 gap-6 my-4 sm:grid-cols-4 lg:grid-cols-8"> 
+        <h2>Skills & Tools</h2>
+        <div className="grid gap-6 pt-2 grid-cols-2 sm:grid-cols-4 lg:grid-cols-8"> 
           {
             skills.nodes.map( (skill) => (
               <SkillCard
@@ -101,9 +98,8 @@ export default function WebIndexPage({ data }) {
             ))
           }
         </div>
-        <IndexLink path="/about#skills" customClass="mt-14 mb-5">All Skills</IndexLink>
+        <IndexLink path="/about#skills" customClass="mt-14 mb-6">All Skills</IndexLink>
       </section>
-      
       
     </article>
   );
