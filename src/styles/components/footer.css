@@ -7,7 +7,7 @@
 }
 
 .footer__work {
-    @apply mt-6 mb-12 lg:pr-4 lg:border-r lg:border-colorGrayMedium;
+    @apply mt-6 lg:mb-12 lg:pr-4;
     
     .current-status {
         @apply text-colorOrange font-medium;
@@ -19,7 +19,7 @@
 }
 
 .footer__testimonial {
-    @apply my-6;
+    @apply border-t border-colorGrayMedium pt-6 mt-6 mb-10 lg:border-0 lg:mb-0 lg:mt-0 lg:pt-0;
 
 }
 

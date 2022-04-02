@@ -37,7 +37,7 @@ export default function Footer() {
         <footer className="footer-container">
             <h2 className="sr-only">Footer</h2>
             <section className="footer__bgImage" id="contact">
-                <div className="container grid gap-6 grid-cols-1 lg:grid-cols-2">
+                <div className="container grid gap-6 grid-cols-1 items-center lg:grid-cols-2">
                     <div className="footer__work">
                         <h2>In need of a developer?</h2>
                         <p>
@@ -50,7 +50,8 @@ export default function Footer() {
                         <a href="mailto:adam.hemzal@gmail.com" className="button button__dark">Send a message</a>
                     </div>
                     <div className="footer__testimonial">
-                        <p>Testimonial here</p>
+                        <p className="text-h4 text-colorGrayDark mt-0 mb-0 text-center lg:text-right">@adamhemzal</p>
+                        <p className="text-h4 text-colorGrayDark mt-0 mb-0 text-center lg:text-right">adam.hemzal (at) gmail.com</p>
                     </div>
                 </div>
             </section>
@@ -86,7 +87,7 @@ export default function Footer() {
 
                     <div className="footer__copyright">
                         <p>
-                            @ 2022 Adam Hemzal | Powered by 
+                            @ 2022 Made by <span className="font-medium">Adam Hemzal</span> | Powered by 
                             <a href="https://www.gatsbyjs.com/" rel="noopener noreferrer" target="_blank">Gatsby</a> 
                             & 
                             <a href="https://tailwindcss.com/" rel="noopener noreferrer" target="_blank">TailwindCSS</a>
