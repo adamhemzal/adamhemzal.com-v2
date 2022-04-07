@@ -1,131 +1,26 @@
 ---
 slug: "diplomatic-academy"
 title: "Diplomatic Academy"
-description: "Personal courses"
-logo: "./barum-czech-rally-zlin-logo.png"
-website: "https://www.czechrally.com/wcd/maps/index.html"
+description: "WordPress site for the client who provides personal courses about diplomacy"
+logo: "./diplomatic-academy-czech-logo.png"
+website: "https://diplomaticka-akademie.cz/en/"
+role: "Software Developer"
 tools: 
-    - "trollo"
-    - "putin"
-    - "meat"
+  - "WordPress"
+  - "jQuery"
 language: "en"
 type: "project"
-duration: "Jul 21 - Aug 21"
-created: "2022-03-09"
-last-update: "2022-03-11"
+timeline: "Aug 18 - Sep 18"
+created: "2022-04-07"
+last-update: "2022-04-07"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-<!-- excerpt -->
+# Diplomatic Academy
 
+---
 
-# h1 Heading
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis enim at est pulvinar lacinia at vel enim. Duis porttitor, velit in viverra ultricies, nunc nisl semper leo, at hendrerit nibh odio vel sapien. Suspendisse sit amet scelerisque urna. Suspendisse potenti. Nunc porttitor maximus dignissim. Phasellus accumsan sollicitudin luctus. Vivamus vestibulum ipsum at ligula tristique, quis lobortis ex lobortis. Aliquam imperdiet, odio vel volutpat luctus, ante libero laoreet dui, quis imperdiet orci urna eget enim. Maecenas vulputate a metus eu suscipit.
 
+Ut et purus faucibus, imperdiet tellus ut, pretium metus. Morbi ut ipsum faucibus, tempus odio at, mollis mi. Aliquam ex risus, tristique non orci nec, eleifend suscipit augue. Nunc sollicitudin sodales eros, quis efficitur ante faucibus vitae. Nam posuere dignissim neque at rutrum. Suspendisse potenti. Aenean venenatis malesuada ante, non sagittis nunc congue ac. Vestibulum sagittis posuere ex, id venenatis mi porta at. Cras tincidunt augue felis, eleifend sagittis mi posuere eget. Ut sodales quam ac dolor euismod, sit amet facilisis tortor elementum. Mauris in rhoncus dolor.
 
-## Horizontal Rules
-___
-
-## Emphasis
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-~~Strikethrough~~
-
-
-## Blockquotes
-
-
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
-
-## Lists
-
-Unordered
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-console.log(foo(5));
-```
-
-## Tables
-
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-Right aligned columns
-
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+![Image of Diplomatic Academy Website](./diplomaticka-akademie-showcase.png)

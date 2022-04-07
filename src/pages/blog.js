@@ -4,7 +4,6 @@ import PostLink from "../components/PostLink";
 
 export default function BlogIndexPage({ data }) {
     const posts = data.allMarkdownRemark.nodes;
-    console.log(posts);
 
     return (
         <article className="container py-12">

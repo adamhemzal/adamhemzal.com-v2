@@ -49,7 +49,7 @@ module.exports = {
               backgroundColor: `transparent`,
               withWebp: true,
               quality: 80,
-              maxWidth: 900,
+              maxWidth: 990,
             },
           },
           {

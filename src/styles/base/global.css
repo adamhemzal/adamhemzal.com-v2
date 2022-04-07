@@ -12,7 +12,7 @@ body {
     color: theme('colors.colorBlack');
     font-family: theme('fontFamily.sans');
     font-weight: theme('fontWeight.light');
-    font-size: 102%;
+    font-size: 104%;
     line-height: 1.65;
     margin: 0;
     padding: 0;
@@ -69,7 +69,21 @@ blockquote, ol, p, table, ul {
     font-size: theme('fontSize.body');
 }
 
+hr {
+    color: theme('colors.colorGrayLight');
+}
+
 strong {
     font-weight: theme('fontWeight.bold');
 }
 
+mark {
+    background-color: theme('colors.colorOrangeLight');
+}
+
+sup {
+    font-style: italic;
+    font-weight: theme('fontWeight.light');
+    top: -1.5em;
+    font-size: theme('fontSize.small2x');
+}

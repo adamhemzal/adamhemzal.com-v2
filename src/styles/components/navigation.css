@@ -12,7 +12,7 @@
 
 /* Mobile Navigation */
 .nav__mobile {
-    @apply h-screen w-screen absolute z-10 p-0 m-0 backdrop-blur-md bg-colorWhite bg-opacity-75 top-16 inset-x-0 justify-start flex-col font-light border-t-2 border-colorGrayLight divide-y divide-solid divide-colorGrayMedium list-none list-outside md:hidden;
+    @apply h-screen w-screen absolute z-20 p-0 m-0 backdrop-blur-md bg-colorWhite bg-opacity-75 top-16 inset-x-0 justify-start flex-col font-light border-t-2 border-colorGrayLight divide-y divide-solid divide-colorGrayMedium list-none list-outside md:hidden;
 
     li {
         @apply m-0;

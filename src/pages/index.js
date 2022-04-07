@@ -17,19 +17,19 @@ export default function WebIndexPage({ data }) {
           <div className="lg:col-span-6">
             <h1>Hey, I'm Adam</h1>
             <h2 className="font-light text-h3">Software Developer with the focus on Front-End, UX & Web 3.0</h2>
-            <p>
-              I help people and brands reach their goals by designing & building user-centric digital products and interactive experiences
-            </p>
             <p className="text-justify">
               <strong>I love</strong> building projects and write about what I learn and do. This website is my personal digital garden — a place where you can find my notes, thoughts and tutorials on topics like web, design, technology, privacy, crypto, and more.
             </p>
-            <ButtonLink path="/projects" customClass="mr-4 button__dark">View projects</ButtonLink>
-            <ButtonLink path="/about">More about me</ButtonLink>
+            <div className="flex flex-col sm:flex-row text-center">
+              <ButtonLink path="/projects" customClass="button__dark mb-3 sm:mr-4 sm:mb-0">View projects</ButtonLink>
+              <ButtonLink path="/about">More about me</ButtonLink>
+            </div>
           </div>
-          <div className="lg:col-span-6 place-self-center">
+          <div className="lg:col-start-8 lg:col-end-13 place-self-center">
             <StaticImage 
               alt="Photo of Adam Hemzal"
               src="../images/adam-hemzal-drawing-optimized.png"
+              className="rounded"
             />
           </div>
           <div className="lg:col-span-12 mt-10">
@@ -74,7 +74,7 @@ export default function WebIndexPage({ data }) {
                     description={project.frontmatter.description}
                     website={project.frontmatter.website}
                     logo={image}
-                    duration={project.frontmatter.duration}
+                    timeline={project.frontmatter.timeline}
                     customClass=""
                   />
                 )
@@ -98,7 +98,7 @@ export default function WebIndexPage({ data }) {
             ))
           }
         </div>
-        <IndexLink path="/about#skills" customClass="mt-14 mb-6">All Skills</IndexLink>
+        
       </section>
       
     </article>
@@ -139,7 +139,7 @@ query IndexQuery {
         }
         website
         tools
-        duration
+        timeline
       }
     }
   }

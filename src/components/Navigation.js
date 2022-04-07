@@ -42,7 +42,7 @@ export default function Navigation() {
             <ul className={`${mobileNav ? 'flex' : 'hidden top'} nav__mobile`}>
                 {navLinks.map( (menuLink)  => (
                     <li key={menuLink.label}>
-                        <Link to={menuLink.url} className="nav__link" activeClassName="nav__link-active">{menuLink.label}</Link>
+                        <Link to={menuLink.url} className="nav__link" activeClassName="nav__link-active" onClick={handleMenu} onKeyPress={handleMenu}>{menuLink.label}</Link>
                     </li> 
                 ))}
             </ul>

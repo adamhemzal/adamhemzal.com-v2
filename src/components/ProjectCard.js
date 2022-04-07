@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-export default function ProjectCard({ path, website, title, logo, duration, description, customClass }) {
+export default function ProjectCard({ path, website, title, logo, timeline, description, customClass }) {
     return (
         <article className={`project-card ${customClass}`}>
             <div>
@@ -20,7 +20,7 @@ export default function ProjectCard({ path, website, title, logo, duration, desc
                         <img src={logo} alt={`Logo of ${title}`} className="image-svg"/>
                     }
                 </div>
-                <p className="duration">{duration}</p>
+                <p className="duration">{timeline}</p>
             </div>
 
             <div>

@@ -2,15 +2,21 @@ import React from "react";
 import { graphql } from "gatsby";
 
 export default function PostTemplate({ data }) {
-  const result = data.markdownRemark;
+  const post = data.markdownRemark;
   const { html } = data.markdownRemark;
-  console.log(result);
+  console.log(post);
   
     return (
       <article
         className="container pt-12 post-container"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+        itemScope
+        itemType="http://schema.org/Article">
+          <header>
+            <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          </header>
+          
+          <section dangerouslySetInnerHTML={{ __html: html }} itemProp="articleBody" />
+      </article>
     )
 }
 

@@ -9,6 +9,7 @@ export default function ProjectsIndexPage({ data }) {
         <article className="container py-12">
             <header>
                 <h1>Projects</h1>
+                <h2 className="text-h3 font-light mb-8">Websites, web apps and prototypes</h2>
             </header>
             <section className="grid grid-cols-1 gap-6 my-4 md:grid-cols-12">
               {
@@ -48,7 +49,7 @@ query ProjectQuery {
               gatsbyImageData
             }
           }
-          duration
+          timeline
           description
           website
         }

@@ -1,3 +1,15 @@
 .project-container {
     
 }
+
+.project__meta-info {
+
+}
+
+.project__meta-card {
+    @apply rounded shadow-md px-5 py-4 flex flex-col items-center bg-colorWhite border border-colorGrayLight;
+}
+
+.project__meta-title {
+    @apply font-bold self-start mb-2 mt-0;
+}
