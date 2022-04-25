@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
-import ButtonLink from "./ButtonLink";
 
 export default function Footer() {
     const data = useStaticQuery(graphql`

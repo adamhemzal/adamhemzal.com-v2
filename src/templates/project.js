@@ -1,5 +1,6 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+//import { ArrowLeft } from "../icons/ArrowLeft";
 
 export default function ProjectTemplate({ data }) {
     const project = data.markdownRemark;
@@ -36,7 +37,7 @@ export default function ProjectTemplate({ data }) {
 
               <div className="project__meta-card">
                 <p className="project__meta-title">⚙️ Tech Stack</p>
-                <p className="my-2 mx-0 text-small">
+                <p className="my-2 mx-0 text-small flex flex-wrap">
                   {project.frontmatter.tools.map( (item) => (
                     <span className="mx-2">{item}</span>
                   ))
@@ -57,6 +58,8 @@ export default function ProjectTemplate({ data }) {
             dangerouslySetInnerHTML={{ __html: html }}
             itemProp="articleBody"
           />
+
+          <Link to={`/#${project.frontmatter.slug}`} className="project-card__button">Back</Link>
         </article>
     );
 }
@@ -70,16 +73,10 @@ query SingleProjectQuery($id: String!) {
         slug
         title
         description
-        logo {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
         role
         tools
         timeline
         website
-        type
       }
     }
   }

@@ -2,7 +2,9 @@
 slug: "warrenhousevets"
 title: "Warren House Vets"
 description: "Custom WordPress website for the client"
+summary: "Summary test here"
 logo: "./warrenhouse-vets-logo.png"
+thumbnail: "./warrenhouse-vets-showcase.png"
 website: "https://warrenhousevets.com/"
 role: "Software Developer"
 tools: 
@@ -11,8 +13,8 @@ tools:
 language: "en"
 type: "project"
 timeline: "Jul 21 - Sep 21"
-created: "2022-04-07"
-last-update: "2022-04-07"
+created: "2021-04-07"
+last-update: "2022-04-24"
 ---
 
 # Warren House Vets

@@ -1,12 +1,12 @@
 .project-card {
-    @apply shadow-md rounded py-7 px-5 border border-colorGrayLight flex flex-col justify-between items-center md:col-span-6 lg:col-span-4;
+    @apply shadow-md rounded border border-colorGrayLight flex flex-col justify-between lg:flex-row;
 
     .title {
-        @apply font-medium text-center mt-0 text-h4;
+        @apply font-medium text-left mt-0 text-h4 mb-2;
     }
 
     .image-container {
-        @apply w-9/12 mx-auto py-2;
+        @apply py-0 object-cover;
     }
 
     .image-svg {
@@ -14,11 +14,11 @@
     }
 
     .duration {
-        @apply text-colorGrayMedium text-center;
+        @apply text-colorGrayMedium text-left mt-0;
     }
 
-    .description {
-        @apply text-center;
+    .summary {
+        @apply text-left;
     }
 }
 

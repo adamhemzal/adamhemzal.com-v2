@@ -25,10 +25,10 @@ export default function WebIndexPage({ data }) {
               <ButtonLink path="/about">More about me</ButtonLink>
             </div>
           </div>
-          <div className="lg:col-start-8 lg:col-end-13 place-self-center">
+          <div className="py-4 mt-5 lg:py-0 lg:mt-0 lg:col-start-8 lg:col-end-13 place-self-center">
             <StaticImage 
               alt="Photo of Adam Hemzal"
-              src="../images/adam-hemzal-drawing-optimized.png"
+              src="../images/adam-hemzal-draw-2022.png"
               className="rounded"
             />
           </div>
@@ -56,24 +56,22 @@ export default function WebIndexPage({ data }) {
 
       <section className="py-4">
           <div className="flex flex-row justify-between items-center">
-            <h2>Selected Projects</h2>
+            <h2 id="projects">Projects</h2>
           </div>
 
-          <div className="grid gap-6 pt-2 grid-cols-1 md:grid-cols-12">
+          <div className="grid gap-6 pt-2 grid-cols-1">
             {
               projects.nodes.map( (project) => {
-                let image = getImage(project.frontmatter.logo);
-                if (!image) {
-                  image = project.frontmatter.logo.publicURL;
-                }
+                let image = getImage(project.frontmatter.thumbnail);
                 return (
                   <ProjectCard 
                     key={project.frontmatter.slug}
+                    slug={project.frontmatter.slug}
                     path={`projects/${project.frontmatter.slug}`}
                     title={project.frontmatter.title}
-                    description={project.frontmatter.description}
+                    summary={project.frontmatter.summary}
                     website={project.frontmatter.website}
-                    logo={image}
+                    thumbnail={image}
                     timeline={project.frontmatter.timeline}
                     customClass=""
                   />
@@ -81,7 +79,6 @@ export default function WebIndexPage({ data }) {
               })
             }
           </div>
-          <IndexLink path="/projects" customClass="mt-14 mb-5">All Projects</IndexLink>
       </section>   
 
       <section className="py-4">
@@ -122,7 +119,7 @@ query IndexQuery {
     }
   }
   projects: allMarkdownRemark(
-    limit: 3
+    limit: 4
     sort: {fields: frontmatter___created, order: DESC}
     filter: {frontmatter: {type: {eq: "project"}}}
   ) {
@@ -130,8 +127,8 @@ query IndexQuery {
       frontmatter {
         slug
         title
-        description
-        logo {
+        summary
+        thumbnail {
           publicURL
           childImageSharp {
             gatsbyImageData

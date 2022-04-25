@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import PostLink from "../components/PostLink";
 
 export default function BlogIndexPage({ data }) {

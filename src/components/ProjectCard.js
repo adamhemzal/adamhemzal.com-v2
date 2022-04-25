@@ -2,30 +2,15 @@ import React from "react";
 import { Link } from "gatsby";
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-export default function ProjectCard({ path, website, title, logo, timeline, description, customClass }) {
+export default function ProjectCard({ path, website, title, thumbnail, timeline, summary, slug, customClass }) {
     return (
         <article className={`project-card ${customClass}`}>
-            <div>
-                <h3 className="title">{title}</h3>
-                <div className="image-container">
-                    
-                    {typeof logo === "object" &&
-                        <GatsbyImage 
-                            alt={`Logo of ${title}`}
-                            image={logo}
-                        />
-                    }
-
-                    {typeof logo === "string" &&
-                        <img src={logo} alt={`Logo of ${title}`} className="image-svg"/>
-                    }
-                </div>
+            
+            <div className="py-7 px-7 md:basis-1/2">
+                <h3 className="title" id={slug}>{title}</h3>
                 <p className="duration">{timeline}</p>
-            </div>
-
-            <div>
-                <p className="description">{description}</p>
-                <div className="flex justify-center">
+                <p className="summary">{summary}</p>
+                <div className="flex justify-left">
                     <Link 
                         to={path} 
                         className="project-card__button project-card__button-dark mr-4">
@@ -38,6 +23,17 @@ export default function ProjectCard({ path, website, title, logo, timeline, desc
                         className="project-card__button">
                         Website
                     </a>
+                </div>
+
+            </div>
+
+            <div className="md:basis-1/2">
+                <div className="image-container">
+                    <GatsbyImage 
+                        alt={`Image of ${title}`}
+                        image={thumbnail}
+                        className="object-cover"
+                    />
                 </div>
             </div>
 

@@ -1,23 +1,26 @@
 ---
-slug: "diplomatic-academy"
-title: "Diplomatic Academy"
-description: "WordPress site for the client who provides personal courses about diplomacy"
+slug: "rate-my-meal"
+title: "Rate My Meal"
+description: "Serverless web app allowing users rating their meals. Built by React and hosted on AWS."
 summary: "WordPress site for the client who provides personal courses. I was in the role of WordPress developer who was responsible for creating custom theme based on a given design."
-logo: "./diplomatic-academy-czech-logo.png"
-thumbnail: "./diplomaticka-akademie-showcase.png"
-website: "https://diplomaticka-akademie.cz/en/"
+logo: "./rate-my-meal-showcase.png"
+thumbnail: "./rate-my-meal-showcase.png"
+website: "https://www.ratemymeal.wtf/"
 role: "Software Developer"
 tools: 
-  - "WordPress"
-  - "jQuery"
+  - "React"
+  - "TailwindCSS"
+  - "DynamoDB"
+  - "Cognito"
+  - "AWS"
 language: "en"
 type: "project"
-timeline: "Aug 18 - Sep 18"
-created: "2022-01-27"
+timeline: "Mar 22 - Apr 22"
+created: "2022-04-12"
 last-update: "2022-04-24"
 ---
 
-# Diplomatic Academy
+# Rate My Meal
 
 ---
 

@@ -1,5 +1,5 @@
 .footer-container {
-    @apply w-full border-t border-colorGrayLight;
+    @apply w-full border-t-2 border-colorGrayLight;
 }
 
 .footer__bgImage {
