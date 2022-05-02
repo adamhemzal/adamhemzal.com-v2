@@ -40,7 +40,7 @@ query BlogQuery {
     }
     allMarkdownRemark(
       sort: {fields: frontmatter___created, order: DESC}
-      filter: {frontmatter: {type: {eq: "article"}}}
+      filter: {frontmatter: {type: {eq: "blog"}}}
     ) {
       nodes {
         frontmatter {

@@ -39,7 +39,7 @@ export default function ProjectTemplate({ data }) {
                 <p className="project__meta-title">⚙️ Tech Stack</p>
                 <p className="my-2 mx-0 text-small flex flex-wrap">
                   {project.frontmatter.tools.map( (item) => (
-                    <span className="mx-2">{item}</span>
+                    <span key={item} className="mx-2">{item}</span>
                   ))
                   }
                 </p>

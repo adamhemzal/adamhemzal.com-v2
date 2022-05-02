@@ -10,7 +10,7 @@ role: "Software Developer / UX Designer"
 tools: 
     - "React"
 language: "en"
-type: "project"
+type: "projects"
 timeline: "Dec 21 - Jan 22"
 created: "2022-03-22"
 last-update: "2022-04-24"

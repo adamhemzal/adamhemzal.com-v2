@@ -11,7 +11,7 @@ tools:
   - "jQuery"
   - "LeafletJS"
 language: "en"
-type: "project"
+type: "projects"
 timeline: "Jul 21 - Aug 21"
 created: "2022-01-30"
 last-update: "2022-04-24"

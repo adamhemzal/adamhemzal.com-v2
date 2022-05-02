@@ -9,7 +9,7 @@ tags:
     - "tag2"
     - "tag3"
 language: "en"
-type: "article"
+type: "blog"
 created: "2022-03-09"
 last-update: "2022-03-11"
 ---

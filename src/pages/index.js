@@ -107,7 +107,7 @@ query IndexQuery {
   posts: allMarkdownRemark(
     limit: 7
     sort: {fields: frontmatter___created, order: DESC}
-    filter: {frontmatter: {type: {eq: "article"}}}
+    filter: {frontmatter: {type: {eq: "blog"}}}
   ) {
     nodes {
       frontmatter {
@@ -121,7 +121,7 @@ query IndexQuery {
   projects: allMarkdownRemark(
     limit: 4
     sort: {fields: frontmatter___created, order: DESC}
-    filter: {frontmatter: {type: {eq: "project"}}}
+    filter: {frontmatter: {type: {eq: "projects"}}}
   ) {
     nodes {
       frontmatter {

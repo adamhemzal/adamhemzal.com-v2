@@ -40,6 +40,11 @@
     "link": "https://www.adobe.com/ca/creativecloud.html"
   },
   {
+    "name": ".NET Core",
+    "icon": "netcore",
+    "link": "https://dotnet.microsoft.com/en-us/"
+  },
+  {
     "name": "MySQL",
     "icon": "mysql",
     "link": "https://www.mysql.com/"
@@ -58,11 +63,6 @@
     "name": "PowerBI",
     "icon": "powerbi",
     "link": "https://powerbi.microsoft.com/"
-  },
-  {
-    "name": ".NET Core",
-    "icon": "netcore",
-    "link": "https://dotnet.microsoft.com/en-us/"
   }
   
 ]

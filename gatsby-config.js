@@ -9,12 +9,45 @@ module.exports = {
   siteMetadata: {
     title: `Adam Hemzal`,
     author: `Adam Hemzal`,
+    description: 
+    `Software developer with the focus on Front-End, UX and Web 3.0. An occasional blogger`,
     siteUrl: `https://www.adamhemzal.com`,
-    description: `Software engineer with the focus on Front-End, UX and Web 3.0. An occasional blogger`,
     feedUrl: `url here`,
-    logo: `url here`
+    siteLogo: `url here`,
+    favicon: `url here`
   },
 	plugins: [
+    /*********************************************** 
+     * Analyzer
+    ************************************************/
+   `gatsby-plugin-webpack-bundle-analyzer`,
+
+    /*********************************************** 
+     * Meta
+    ************************************************/
+   `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Adam Hemzal`,
+        short_name: `Adam Hemzal`,
+        description: 
+        `Software developer with the focus on Front-End, UX and Web 3.0. An occasional blogger`,
+        start_url: `/`,
+        background_color: `white`,
+        theme_color: `#FB9300`,
+        lang: `en`,
+        display: `standalone`,
+        icon: `static/favicon.ico`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/articles/*`], // pre cache some pages
+      },
+    },
+
     /*********************************************** 
      * PostCSS + TailwindCSS
     ************************************************/

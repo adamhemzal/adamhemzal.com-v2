@@ -14,7 +14,7 @@ tools:
   - "Cognito"
   - "AWS"
 language: "en"
-type: "project"
+type: "projects"
 timeline: "Mar 22 - Apr 22"
 created: "2022-04-12"
 last-update: "2022-04-24"

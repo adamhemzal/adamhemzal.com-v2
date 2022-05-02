@@ -48,7 +48,7 @@ exports.createPages = async ({ actions, graphql }) => {
     }
     
     // Define content types
-    const posts = all.filter( (post) => post.frontmatter.type === 'article');
+    const posts = all.filter( (post) => post.frontmatter.type === 'blog');
     const projects = all.filter( (project) => project.frontmatter.type === 'project');
 
 

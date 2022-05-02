@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function ProjectCard({ path, website, title, thumbnail, timeline, summary, slug, customClass }) {

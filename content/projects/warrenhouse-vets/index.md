@@ -11,7 +11,7 @@ tools:
     - "WordPress"
     - "jQuery"
 language: "en"
-type: "project"
+type: "projects"
 timeline: "Jul 21 - Sep 21"
 created: "2021-04-07"
 last-update: "2022-04-24"

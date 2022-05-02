@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Seo from "../components/Seo";
 
 export default function PostTemplate({ data }) {
   const post = data.markdownRemark;
@@ -7,16 +8,27 @@ export default function PostTemplate({ data }) {
   console.log(post);
   
     return (
-      <article
-        className="container pt-12 post-container"
-        itemScope
-        itemType="http://schema.org/Article">
-          <header>
-            <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          </header>
-          
-          <section dangerouslySetInnerHTML={{ __html: html }} itemProp="articleBody" />
-      </article>
+      <>
+        <Seo 
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+          lang={post.frontmatter.language}
+          image={post.frontmatter.thumbnail.publicURL}
+          pageType={post.frontmatter.type}
+          pathName={post.frontmatter.slug}
+        />
+        <article
+          className="container pt-12 post-container"
+          itemScope
+          itemType="http://schema.org/Article">
+            <header>
+              <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            </header>
+            
+            <section dangerouslySetInnerHTML={{ __html: html }} itemProp="articleBody" />
+        </article>      
+      </>
+
     )
 }
 
@@ -28,15 +40,19 @@ query BlogPostById($id: String!) {
     html
     frontmatter {
       last_update(formatString: "MMM DD, YYYY")
-      language
+      slug
+      title
+      description
+      thumbnail {
+        publicURL
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
       category
-      title
       tags
-    }
-  }
-  site {
-    siteMetadata {
-      title
+      language
+      type
     }
   }
 }
