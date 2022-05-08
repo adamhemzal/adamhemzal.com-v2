@@ -1,5 +1,4 @@
 const { lazy } = require("react");
-
 /**
  * Configure your Gatsby site with this file.
  *
@@ -12,9 +11,8 @@ module.exports = {
     description: 
     `Software developer with the focus on Front-End, UX and Web 3.0. An occasional blogger`,
     siteUrl: `https://www.adamhemzal.com`,
-    feedUrl: `url here`,
-    siteLogo: `url here`,
-    favicon: `url here`
+    siteSocialImage: `/orange-mae-mu-unsplash.jpg`,
+    feedUrl: `https://www.adamhemzal.com/rssfeed`,
   },
 	plugins: [
     /*********************************************** 
@@ -34,17 +32,18 @@ module.exports = {
         description: 
         `Software developer with the focus on Front-End, UX and Web 3.0. An occasional blogger`,
         start_url: `/`,
+        crossOrigin: `use-credentials`,
         background_color: `white`,
         theme_color: `#FB9300`,
         lang: `en`,
-        display: `standalone`,
-        icon: `static/favicon.ico`,
+        display: `minimal-ui`,
+        icon: `static/favicon.svg`,
       },
     },
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/articles/*`], // pre cache some pages
+        precachePages: [`/articles/*`], // pre-cache some pages
       },
     },
 

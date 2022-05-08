@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-//import { ArrowLeft } from "../icons/ArrowLeft";
+import Seo from "../components/Seo";
 
 export default function ProjectTemplate({ data }) {
     const project = data.markdownRemark;
@@ -9,6 +9,15 @@ export default function ProjectTemplate({ data }) {
     const html = data.markdownRemark.html.split('</h1>')[1]; 
     
     return (
+      <>
+        <Seo
+          title={project.frontmatter.title}
+          description={project.frontmatter.description}
+          lang={project.frontmatter.language}
+          image={project.frontmatter.thumbnail.publicURL}
+          pageType={project.frontmatter.type}
+          pathName={project.frontmatter.slug}
+        />
         <article 
           className="container py-12 project-container"
           itemScope
@@ -61,6 +70,8 @@ export default function ProjectTemplate({ data }) {
 
           <Link to={`/#${project.frontmatter.slug}`} className="project-card__button">Back</Link>
         </article>
+      
+      </>
     );
 }
 
@@ -75,8 +86,13 @@ query SingleProjectQuery($id: String!) {
         description
         role
         tools
+        thumbnail {
+          publicURL
+        }
         timeline
         website
+        type
+        language
       }
     }
   }

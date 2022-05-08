@@ -1,0 +1,12 @@
+/* AUTHOR */
+Full-name: Adam Hemzal
+Twitter: @adamhemzal (https://twitter.com/adamhemzal)
+
+/* SITE */
+Last-update: 2022/05/15
+Framework: Gatsby 
+Components: TailwindCSS
+Favourite-coding-music: Bonobo (https://www.youtube.com/channel/UCgyl5xVlLLUZVpgfMGw-ETA)
+IDE: VSCode
+
+/* Background pattern from Toptal Subtle Patterns */

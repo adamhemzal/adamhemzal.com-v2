@@ -16,8 +16,8 @@ import "@fontsource/lexend-deca/700.css";
  * PRISM - Styling for <pre> and <code>
 */
 import "prismjs/plugins/line-numbers/prism-line-numbers.min.css";
-import "prismjs/themes/prism-tomorrow.min.css";
-import "prismjs/plugins/show-language/prism-show-language";
+import './src/styles/prism-theme.css';
+//import "prismjs/themes/prism-tomorrow.min.css";
 
 /**
  * GLOBAL STYLES

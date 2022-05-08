@@ -70,7 +70,7 @@ export default function Footer() {
                             <p className="nav-title">Resources</p>
                             {
                                 resource.map( (item) => (
-                                    <a key={item.id} href={item.url} rel="noopener noreferrer">{item.label}</a>
+                                    <a key={item.id} href={item.url} rel="noopener noreferrer" target="_blank">{item.label}</a>
                                 ))
                             }
                         </div>
@@ -78,7 +78,7 @@ export default function Footer() {
                             <p className="nav-title">Social & Contact</p>
                             {
                                 social.map( (item) => (
-                                    <a key={item.id} href={item.url} rel="noopener noreferrer">{item.label}</a>
+                                    <a key={item.id} href={item.url} rel="noopener noreferrer" target="_blank">{item.label}</a>
                                 ))
                             }
                         </div>

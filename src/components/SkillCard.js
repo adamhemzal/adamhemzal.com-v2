@@ -7,6 +7,8 @@ import { WordPressIcon } from "../icons/WordPressIcon";
 import { LeafletIcon } from "../icons/LeafletIcon";
 import { GulpIcon } from "../icons/GulpIcon";
 import { SassIcon } from "../icons/SassIcon";
+import { TailwindIcon } from "../icons/TailwindIcon";
+import { DotNetCoreIcon } from "../icons/DotNetCoreIcon";
 
 export default function SkillCard({ name, icon, link, customClass }) {
     // Load dynamically icons
@@ -35,6 +37,12 @@ export default function SkillCard({ name, icon, link, customClass }) {
             break;
         case "sass":
             selectedIcon = <SassIcon customClass="image-svg" />
+            break;
+        case "dotnetcore":
+            selectedIcon = <DotNetCoreIcon customClass="image-svg" />
+            break;
+        case "tailwind":
+            selectedIcon = <TailwindIcon customClass="image-svg"/>
             break;
         default: 
             selectedIcon = <p>No icon</p>;

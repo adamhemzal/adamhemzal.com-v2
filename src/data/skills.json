@@ -9,40 +9,45 @@
     "icon": "node", 
     "link": "https://nodejs.org/en/"
   },
-  { 
-    "name": "Gatsby", 
-    "icon": "gatsby", 
-    "link": "https://www.gatsbyjs.com/" 
-  },
   {
     "name": "WordPress",
     "icon": "wordpress",
     "link": "https://wordpress.org/"
   },
   { 
+    "name": "Gatsby", 
+    "icon": "gatsby", 
+    "link": "https://www.gatsbyjs.com/" 
+  },
+  {
+    "name": ".NET Core",
+    "icon": "dotnetcore",
+    "link": "https://dotnet.microsoft.com/en-us/"
+  },
+  {
+    "name": "TailwindCSS",
+    "icon": "tailwind",
+    "link": "https://tailwindcss.com/"
+  },
+  { 
     "name": "Sass", 
     "icon": "sass", 
     "link": "https://sass-lang.com/"
-  },
-  { 
-    "name": "Gulp", 
-    "icon": "gulp", 
-    "link": "https://gulpjs.com/"
-  },
-  { 
-    "name": "LeafletJS", 
-    "icon": "leaflet", 
-    "link": "https://leafletjs.com/"
   },
   {
     "name": "AdobeCC",
     "icon": "adobe",
     "link": "https://www.adobe.com/ca/creativecloud.html"
   },
-  {
-    "name": ".NET Core",
-    "icon": "netcore",
-    "link": "https://dotnet.microsoft.com/en-us/"
+  { 
+    "name": "LeafletJS", 
+    "icon": "leaflet", 
+    "link": "https://leafletjs.com/"
+  },
+  { 
+    "name": "Gulp", 
+    "icon": "gulp", 
+    "link": "https://gulpjs.com/"
   },
   {
     "name": "MySQL",
@@ -53,11 +58,6 @@
     "name": "AWS",
     "icon": "aws",
     "link": "https://aws.amazon.com/"
-  },
-  {
-    "name": "TailwindCSS",
-    "icon": "tailwind",
-    "link": "https://tailwindcss.com/"
   },
   {
     "name": "PowerBI",

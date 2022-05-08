@@ -8,7 +8,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-export default function Seo({ title, description, lang, image, pageType, pathName }) {
+export default function Seo({ title, description, lang, image, follow, pageType, pathName }) {
     const { site } = useStaticQuery(graphql`
           query MetaDataQuery {
             site {
@@ -17,23 +17,53 @@ export default function Seo({ title, description, lang, image, pageType, pathNam
                 description
                 author
                 siteUrl
-                siteLogo
+                siteSocialImage
               }
             }
           }
         `
     );
 
-    const metaImage = (image) ? image : site.siteMetadata.siteLogo;
+    const schemaOrgJSONLD = [
+      {
+        '@context': 'http://schema.org',
+        '@type': 'WebSite',
+        url: site.siteMetadata.siteUrl,
+        name: site.siteMetadata.title,
+        alternateName: site.siteMetadata.title,
+      },
+    ];
+
+    if (pageType === 'blog') {
+      schemaOrgJSONLD.push(
+        {
+          '@context': 'http://schema.org',
+          '@type': 'BlogPosting',
+          url: `${site.siteMetadata.siteUrl}/${pageType}/${pathName}`,
+          name: title,
+          alternateName: title,
+          headline: title,
+          description,
+          image: {
+            '@type': 'ImageObject',
+            url: image,
+          },
+          author: {
+            '@type': 'Person',
+            name: site.siteMetadata.author,
+          },
+        },
+      );
+    }
+
+    const metaImage = (image) ? image : site.siteMetadata.siteSocialImage;    
     const metaTitle = (title) ? title : site.siteMetadata.title;
+    const metaRobots = (follow === false) ? `noindex, nofollow` : `index, follow`;
     const metaDescription = (description) ? description : site.siteMetadata.description;
     const metaCanonical = 
     (pageType) ? `${site.siteMetadata.siteUrl}/${pageType}/${pathName}` : 
     (pathName) ? `${site.siteMetadata.siteUrl}/${pathName}` : `${site.siteMetadata.siteUrl}`;
-    
-    const ogType = (pageType) ? 
-    `<meta property="og:type" content="article" />` :  
-    `<meta property="og:type" content="website" />`;
+    const ogType = (pageType) ? `article` : `website`;
 
     return (
         <Helmet
@@ -43,15 +73,20 @@ export default function Seo({ title, description, lang, image, pageType, pathNam
         >
             <title>{title}</title>
             <meta name="description" content={metaDescription} />
-            <meta name="robots" content="index, follow" />
             <meta name="author" content={site.siteMetadata.author} />
+            <meta name="robots" content={metaRobots} />
             <link rel="canonical" href={metaCanonical}/>
+            <link rel="author" type="text/plain" href="humans.txt" />
+
+            <script type="application/ld+json">
+              { JSON.stringify(schemaOrgJSONLD) }
+            </script>
 
             <meta property="og:url" content={metaCanonical} />
             <meta property="og:title" content={metaTitle}/>
             <meta property="og:description" content={metaDescription}/>
             <meta property="og:image" content={metaImage}/>
-            {ogType}
+            <meta property="og:type" content={ogType} />
 
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:title" content={metaTitle} />
@@ -67,6 +102,8 @@ export default function Seo({ title, description, lang, image, pageType, pathNam
 Seo.defaultProps = {
     title: ``,
     description: ``,
+    image: ``,
+    follow: true,
     pageType: ``,
     pathName: ``,
     lang: `en`,

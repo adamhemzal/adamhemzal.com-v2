@@ -5,7 +5,6 @@ import Seo from "../components/Seo";
 export default function PostTemplate({ data }) {
   const post = data.markdownRemark;
   const { html } = data.markdownRemark;
-  console.log(post);
   
     return (
       <>
