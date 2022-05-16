@@ -16,11 +16,6 @@ module.exports = {
   },
 	plugins: [
     /*********************************************** 
-     * Analyzer
-    ************************************************/
-   `gatsby-plugin-webpack-bundle-analyzer`,
-
-    /*********************************************** 
      * Meta
     ************************************************/
    `gatsby-plugin-react-helmet`,
@@ -44,6 +39,37 @@ module.exports = {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/articles/*`], // pre-cache some pages
+      },
+    },
+
+    /*********************************************** 
+     * GoatCounter
+    ************************************************/
+     {
+      resolve: `gatsby-plugin-goatcounter`,
+      options: {
+        // Either `code` or `selfHostUrl` is required.
+        // REQUIRED IF USING HOSTED GOATCOUNTER! https://[my_code].goatcounter.com
+        code: 'ah-per-web',
+        exclude: ['/404'],  // Avoids sending pageview hits from custom paths
+        pageTransitionDelay: 30, // Delays sending pageview hits on route update (in milliseconds)
+        head: false, // boolean `true` in the head and `false` in the body
+        pixel: false, // Set to true to include a gif to count non-JS users
+        // Allow requests from local addresses (localhost, 192.168.0.0, etc.)
+        // for testing the integration locally.
+        // TIP: set up a `Additional Site` in your GoatCounter settings
+        // and use its code conditionally when you `allowLocal`, example below
+        allowLocal: false,
+        // Override the default localStorage key more below
+        localStorageKey: 'skipgc',
+        referrer: false,
+        // Setting it to boolean true will clean the URL from
+        // `?ref` & `?utm_` parameters before sending it to GoatCounter
+        // It uses `window.history.replaceState` to clean the URL in the
+        // browser address bar as well.
+        // This is to prevent ref tracking ending up in your users bookmarks.
+        // All parameters other than `ref` and all `utm_` will stay intact
+        urlCleanup: false,
       },
     },
 

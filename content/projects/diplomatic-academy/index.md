@@ -21,8 +21,10 @@ last-update: "2022-04-24"
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis enim at est pulvinar lacinia at vel enim. Duis porttitor, velit in viverra ultricies, nunc nisl semper leo, at hendrerit nibh odio vel sapien. Suspendisse sit amet scelerisque urna. Suspendisse potenti. Nunc porttitor maximus dignissim. Phasellus accumsan sollicitudin luctus. Vivamus vestibulum ipsum at ligula tristique, quis lobortis ex lobortis. Aliquam imperdiet, odio vel volutpat luctus, ante libero laoreet dui, quis imperdiet orci urna eget enim. Maecenas vulputate a metus eu suscipit.
+Diplomatic Academy is a company providing accredited courses by Czech ministries on diplomacy. Client asked us to create a new fresh website with the good looking and professional design. In [KOALA42](https://koala42.com/en/) we decided to migrate the current website from [Drupal](https://www.drupal.org/) to the most popular CMS out there - [WordPress](https://wordpress.org/).
 
-Ut et purus faucibus, imperdiet tellus ut, pretium metus. Morbi ut ipsum faucibus, tempus odio at, mollis mi. Aliquam ex risus, tristique non orci nec, eleifend suscipit augue. Nunc sollicitudin sodales eros, quis efficitur ante faucibus vitae. Nam posuere dignissim neque at rutrum. Suspendisse potenti. Aenean venenatis malesuada ante, non sagittis nunc congue ac. Vestibulum sagittis posuere ex, id venenatis mi porta at. Cras tincidunt augue felis, eleifend sagittis mi posuere eget. Ut sodales quam ac dolor euismod, sit amet facilisis tortor elementum. Mauris in rhoncus dolor.
+To save time and money the front-end was built using [Webflow](https://webflow.com/). After several weeks of designing the application in [Webflow](https://webflow.com/) I received the HTML & CSS output from colleagues. With that output I started building the WordPress theme from scratch. Final theme uses [Advanced Custom Fields (ACF)](https://www.advancedcustomfields.com/) & [custom post types](https://en-ca.wordpress.org/plugins/custom-post-type-ui/) for storing data about all teachers.  
+
+During that process we have created a [wordpress-to-webflow plugin](https://github.com/Koala42/webflow-to-wordpress-menu) which can convert the Webflow menu to the wordpress menu for your. It is available for free of charge on GitHub. 
 
 ![Image of Diplomatic Academy Website](./diplomaticka-akademie-showcase.png)

@@ -4,7 +4,8 @@ import Seo from "../components/Seo";
 
 export default function PostTemplate({ data }) {
   const post = data.markdownRemark;
-  const { html } = data.markdownRemark;
+  const html = data.markdownRemark.html.split('</h1>')[1]; 
+  //const { html } = data.markdownRemark;
   
     return (
       <>
@@ -17,7 +18,7 @@ export default function PostTemplate({ data }) {
           pathName={post.frontmatter.slug}
         />
         <article
-          className="container pt-12 post-container"
+          className="container py-12 post-container"
           itemScope
           itemType="http://schema.org/Article">
             <header>

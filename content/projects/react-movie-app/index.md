@@ -1,12 +1,12 @@
 ---
 slug: "react-movie-app"
 title: "React Movie App"
-description: "React app displaying data from the movie DB (TMDB) API"
-summary: "React application displaying data from the movie DB (TMDB) API. Worked in 2 members team. I was in the role of UX designer and software developer."
+description: "React app displaying data from the movie database (TMDB) API"
+summary: "React application displaying data from the movie database (TMDB) API. Worked in 2 members team. My role as was UX designer and software developer."
 logo: "./react-movie-app-showcase.png"
 thumbnail: "./react-movie-app-showcase.png"
-website: "https://warrenhousevets.com/"
-role: "Software Developer / UX Designer"
+website: "https://movie.billybui.io/"
+role: "UX Designer / Software Developer"
 tools: 
     - "React"
 language: "en"
@@ -19,9 +19,9 @@ last-update: "2022-04-24"
 # React Movie App
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis enim at est pulvinar lacinia at vel enim. Duis porttitor, velit in viverra ultricies, nunc nisl semper leo, at hendrerit nibh odio vel sapien. Suspendisse sit amet scelerisque urna. Suspendisse potenti. Nunc porttitor maximus dignissim. Phasellus accumsan sollicitudin luctus. Vivamus vestibulum ipsum at ligula tristique, quis lobortis ex lobortis. Aliquam imperdiet, odio vel volutpat luctus, ante libero laoreet dui, quis imperdiet orci urna eget enim. Maecenas vulputate a metus eu suscipit.
+React Movie is a movie application built with React, Context API, [React Router](https://reactrouter.com/), and [Twitter Bootstrap](https://getbootstrap.com/). It was built as a part one of the [BCIT](https://www.bcit.ca/) courses. The application uses The Movie Database [(TMDB)](https://www.themoviedb.org/) API to retrieve movie data and React handles the front-end data display. The application can show movies based on Popularity, Top Rated, Now Playing, and Upcoming. This is a team project created with my colleague [Billy Bui](https://billybui.io/).
 
-Ut et purus faucibus, imperdiet tellus ut, pretium metus. Morbi ut ipsum faucibus, tempus odio at, mollis mi. Aliquam ex risus, tristique non orci nec, eleifend suscipit augue. Nunc sollicitudin sodales eros, quis efficitur ante faucibus vitae. Nam posuere dignissim neque at rutrum. Suspendisse potenti. Aenean venenatis malesuada ante, non sagittis nunc congue ac. Vestibulum sagittis posuere ex, id venenatis mi porta at. Cras tincidunt augue felis, eleifend sagittis mi posuere eget. Ut sodales quam ac dolor euismod, sit amet facilisis tortor elementum. Mauris in rhoncus dolor.
+My role included designing the app using AdobeXD and participating as a software developer on building the application together with my colleague [Billy](https://billybui.io/). 
 
 ![Image of React Movie App Website](./react-movie-app-showcase.png)
 
