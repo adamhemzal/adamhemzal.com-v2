@@ -9,8 +9,8 @@ tags:
     - "Fonts"
 language: "en"
 type: "blog"
-created: "2022-03-12"
-last-update: "2022-03-14"
+created: "2022-05-13"
+last-update: "2022-05-17"
 ---
 
 # Add Fonts to GatsbyJS with or without TailwindCSS

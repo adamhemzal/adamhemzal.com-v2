@@ -20,7 +20,7 @@ export default function WebIndexPage({ data }) {
               <h1>Hey, I'm Adam</h1>
               <h2 className="font-light text-h3">Software Developer with the focus on UX & Web 3.0</h2>
               <p className="text-justify">
-                <strong>I love</strong> building projects and write about what I learn and do. This website is my personal digital garden — a place where you can find my notes, thoughts and tutorials on topics like web, design, technology, privacy, crypto, and more. 
+                <strong>I love</strong> building projects and write about what I learn and do. This website is my personal digital garden — a place where you can find my notes, thoughts and tutorials on topics like web, design, and more. 
               </p>
               <div className="flex flex-col sm:flex-row text-center">
                 <ButtonLink path="/projects" customClass="button__dark mb-3 sm:mr-4 sm:mb-0">View projects</ButtonLink>

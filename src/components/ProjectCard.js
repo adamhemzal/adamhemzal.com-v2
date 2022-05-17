@@ -28,13 +28,11 @@ export default function ProjectCard({ path, website, title, thumbnail, timeline,
             </div>
 
             <div className="md:basis-1/2">
-                <div className="image-container">
                     <GatsbyImage 
                         alt={`Image of ${title}`}
                         image={thumbnail}
                         className="object-cover"
                     />
-                </div>
             </div>
 
         </article>

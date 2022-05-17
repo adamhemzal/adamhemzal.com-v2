@@ -1,16 +1,8 @@
 .project-card {
-    @apply shadow-md rounded border border-colorGrayLight flex flex-col justify-between lg:flex-row;
+    @apply shadow-md rounded border border-colorGrayLight flex flex-col justify-between items-center lg:flex-row;
 
     .title {
         @apply font-medium text-left mt-0 text-h4 mb-2;
-    }
-
-    .image-container {
-        @apply py-0 object-cover;
-    }
-
-    .image-svg {
-        @apply max-h-48 mx-auto m-0 md:max-h-36;
     }
 
     .duration {
