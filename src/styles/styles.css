@@ -23,6 +23,7 @@
 @import "./components/indexLink";
 @import "./components/postLink";
 @import "./components/categoryTag";
+@import "./components/postTag";
 @import "./components/projectCard";
 @import "./components/skillCard";
 

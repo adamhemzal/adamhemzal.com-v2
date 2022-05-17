@@ -1,0 +1,3 @@
+.post-tag {
+    @apply px-4 py-2 rounded-xl text-small bg-colorGrayLight;
+}

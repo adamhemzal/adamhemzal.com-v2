@@ -8,7 +8,7 @@ const config = {
     host: process.env.FTP_HOST,
     port: process.env.FTP_PORT,
     localRoot: __dirname + "/public",
-    remoteRoot: "/www/gatsby/",
+    remoteRoot: "/www/gatsby",
     include: ["*", "**/*"], 
     // delete ALL existing files at destination before uploading, if true
     deleteRemote: false,

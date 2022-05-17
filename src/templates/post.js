@@ -5,7 +5,8 @@ import Seo from "../components/Seo";
 export default function PostTemplate({ data }) {
   const post = data.markdownRemark;
   const html = data.markdownRemark.html.split('</h1>')[1]; 
-  //const { html } = data.markdownRemark;
+  
+  console.log(post);
   
     return (
       <>
@@ -21,10 +22,17 @@ export default function PostTemplate({ data }) {
           className="container py-12 post-container"
           itemScope
           itemType="http://schema.org/Article">
-            <header>
+            <header className="pb-16">
               <h1 itemProp="headline">{post.frontmatter.title}</h1>
+
+              <div className="flex text-colorGrayDark flex-col text-small md:flex-row" itemprop="author" itemtype="http://schema.org/Person">
+                <p className="my-1 md:m-0 md:border-r md:pr-3">Written by <span className="font-medium" itemprop="name">Adam Hemzal</span> </p>
+                <p className="m-0 md:pl-3">Published or updated on <time className="font-medium">{post.frontmatter.last_update}</time> in <span className="font-medium">{post.frontmatter.category}</span>
+                </p>
+              </div>
+
             </header>
-            
+
             <section dangerouslySetInnerHTML={{ __html: html }} itemProp="articleBody" />
         </article>      
       </>
