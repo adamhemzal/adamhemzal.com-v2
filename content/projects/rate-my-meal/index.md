@@ -26,4 +26,4 @@ last-update: "2022-04-24"
 
 Rate My Meal allow users to sign in, add a meal and rate the meal of other users. The application was built as a part one of the [BCIT](https://www.bcit.ca/) courses. It uses [ReactJS](https://reactjs.org/) & [TailwindCSS](https://tailwindcss.com/) on front-end, [ExpressJS](https://expressjs.com/) on back-end, [DynamoDB](https://aws.amazon.com/dynamodb/) as a NoSQL database and everything is hosted on [AWS](https://aws.amazon.com/) as a serverless application. 
 
-![Image of Diplomatic Academy Website](./diplomaticka-akademie-showcase.png)
+![Image of Rate My Meal Website on Desktop](./rate-my-meal-showcase.png)

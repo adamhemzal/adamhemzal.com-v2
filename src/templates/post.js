@@ -6,8 +6,6 @@ export default function PostTemplate({ data }) {
   const post = data.markdownRemark;
   const html = data.markdownRemark.html.split('</h1>')[1]; 
   
-  console.log(post);
-  
     return (
       <>
         <Seo 
@@ -19,7 +17,7 @@ export default function PostTemplate({ data }) {
           pathName={post.frontmatter.slug}
         />
         <article
-          className="container py-12 post-container"
+          className="post-container"
           itemScope
           itemType="http://schema.org/Article">
             <header className="pb-16">

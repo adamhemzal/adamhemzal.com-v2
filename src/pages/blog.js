@@ -68,9 +68,6 @@ query BlogQuery {
           created(formatString: "MMM DD YYYY")
         }
         id
-        headings(depth: h1) {
-          value
-        }
         excerpt(format: PLAIN)
       }
     }

@@ -66,6 +66,7 @@ exports.createPages = async ({ actions, graphql }) => {
             component: path.resolve(`src/templates/post.js`),
             // Add optional context data to be inserted as props into the page component.
             // The context data can also be used as arguments to the page GraphQL query.
+            defer: true,
             context: {
                 id: post.id,
                 slug: post.frontmatter.slug,
@@ -86,6 +87,7 @@ exports.createPages = async ({ actions, graphql }) => {
             component: path.resolve(`src/templates/project.js`),
             // Add optional context data to be inserted as props into the page component.
             // The context data can also be used as arguments to the page GraphQL query.
+            defer: true,
             context: {
                 id: project.id,
                 slug: project.frontmatter.slug,

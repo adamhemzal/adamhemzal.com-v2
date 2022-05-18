@@ -8,9 +8,9 @@
  * FONTS
  * It's better to implement each font weight specifically. It'll save network bandwidth
  */
-import "@fontsource/lexend-deca/300.css";
-import "@fontsource/lexend-deca/500.css";
-import "@fontsource/lexend-deca/700.css";
+import "@fontsource/lexend-deca/latin-300.css";
+import "@fontsource/lexend-deca/latin-500.css";
+import "@fontsource/lexend-deca/latin-700.css";
 
 /** 
  * PRISM - Styling for <pre> and <code>
