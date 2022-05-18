@@ -30,6 +30,7 @@ export default function WebIndexPage({ data }) {
             <div className="py-4 mt-5 lg:py-0 lg:mt-0 lg:col-start-8 lg:col-end-13 place-self-center">
               <StaticImage 
                 alt="Photo of Adam Hemzal"
+                loading="eager"
                 src="../images/adam-hemzal-draw-2022.png"
                 className="rounded"
               />

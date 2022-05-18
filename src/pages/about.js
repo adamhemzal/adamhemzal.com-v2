@@ -48,6 +48,7 @@ export default function AboutPage({ data }) {
                             alt="Photo of Adam Hemzal in a Corporate Building"
                             src="../images/adam-hemzal-about.jpg"
                             className="rounded"
+                            loading="eager"
                         />
                     </div>
                 </header>
