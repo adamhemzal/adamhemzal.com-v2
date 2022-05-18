@@ -2,7 +2,7 @@
 slug: "diplomatic-academy"
 title: "Diplomatic Academy"
 description: "WordPress site for the client who provides personal courses about diplomacy"
-summary: "WordPress site for the client who provides personal courses. I was in the role of WordPress developer who was responsible for creating custom theme based on a given design."
+summary: "WordPress site for the client who provides personal courses. My role as a WordPress developer was to create a custom theme based on a given design."
 logo: "./diplomatic-academy-czech-logo.png"
 thumbnail: "./diplomaticka-akademie-showcase.png"
 website: "https://diplomaticka-akademie.cz/en/"

@@ -2,7 +2,7 @@
 slug: "react-movie-app"
 title: "React Movie App"
 description: "React app displaying data from the movie database (TMDB) API"
-summary: "React application displaying data from the movie database (TMDB) API. Worked in 2 members team. My role as was UX designer and software developer."
+summary: "React application displaying data from the movie database (TMDB) API. Worked in 2 members team. I contributed as a UX designer and software developer."
 logo: "./react-movie-app-showcase.png"
 thumbnail: "./react-movie-app-showcase.png"
 website: "https://movie.billybui.io/"

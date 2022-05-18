@@ -33,7 +33,7 @@ export default function AboutPage({ data }) {
                             Since than I've been helping various clients in the online world. Designing, building websites and small applications as well as communication were parts of my routine alongside with studying at university.
                         </p>
                         <p>
-                            Year 2020 was really tough for everyone because of a virus pandemic. While I was being stuck in Czech Republic, working non-stop from home, I become eager to fully dive deep into the software engineering. 
+                            While I was stuck in the Czech Republic during the global pandemic in 2020, working nonstop from home, I become eager to fully dive deep into the software engineering. 
                         </p>
                         <p>
                             In 2021 I was accepted to <a href="https://www.bcit.ca/programs/software-systems-developer-web-programmer-option-certificate-full-time-699ccertt/" rel="noopener noreferrer" target="_blank">British Columbia Institute of Technology (BCIT), Software Systems Developer program</a>. So I packed my necessary stuff and flew to Vancouver, Canada where I currently live.
@@ -75,7 +75,7 @@ export default function AboutPage({ data }) {
 
                     <h3>Software</h3>
                     <ul>
-                        <li><strong>OS: </strong>Windows 10 (but planning to move to Linux in next two years)</li>
+                        <li><strong>OS: </strong>Windows 10 (but planning to move to Linux in the next two years)</li>
                         <li><strong>Coding: </strong><a href="https://code.visualstudio.com/">VSCode</a></li>
                         <li><strong>Notes: </strong><a href="https://obsidian.md/">Obsidian</a></li>
                         <li><strong>Music: </strong><a href="https://soundcloud.com/">SoundCloud</a></li>
