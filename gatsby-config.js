@@ -59,7 +59,7 @@ module.exports = {
         exclude: ['/404'],  // Avoids sending pageview hits from custom paths
         pageTransitionDelay: 30, // Delays sending pageview hits on route update (in milliseconds)
         head: false, // boolean `true` in the head and `false` in the body
-        pixel: false, // Set to true to include a gif to count non-JS users
+        pixel: true, // Set to true to include a gif to count non-JS users
         // Allow requests from local addresses (localhost, 192.168.0.0, etc.)
         // for testing the integration locally.
         // TIP: set up a `Additional Site` in your GoatCounter settings
