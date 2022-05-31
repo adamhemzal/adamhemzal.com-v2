@@ -40,7 +40,7 @@ export default function Footer() {
                     <div className="footer__work">
                         <h2>In need of a developer?</h2>
                         <p>
-                            Do you like my work? I enjoy discussing new ideas and challenges. If you are interested in my work you can contact me via <strong>email</strong> or reach me at <strong>LinkedIn</strong>. I'm looking forward to hearing from you!
+                            Do you like my work? I enjoy discussing new ideas and challenges. If you are interested in my work, you can contact me via <strong>email</strong> or reach me at <strong>LinkedIn</strong>. I'm looking forward to hearing from you!
                         </p>
                         <p className="current-status">
                             <span className="pulsing-circle"></span>

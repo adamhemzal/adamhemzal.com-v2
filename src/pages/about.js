@@ -24,19 +24,19 @@ export default function AboutPage({ data }) {
                     <div className="lg:col-span-7 text-justify">
                         <h1>About me</h1>
                         <p>
-                            Hi, I'm Adam and I'm a Czech currently living in Vancouver, Canada. I love being creative and express myself through design, code and writing. I enjoy software engineering because it allows me to blend engineering with design and build beautiful & useful things for people.
+                            Hi, I'm Adam and I'm a Czech currently living in Vancouver, Canada. I love being creative and I like to express myself through design, code and writing. I enjoy software engineering because it allows me to blend engineering with design and build beautiful and useful things for people.
                         </p>
                         <p>
-                            I found my passion in 2015 when I was in the second year of my studies at <a href="https://www.vse.cz/english/" rel="noopener noreferrer" target="_blank">Prague University of Business and Economics</a>. In that year I was introduced to HTML, CSS & JavaScript and I immediately fell in love.
+                            I found my passion in 2015 when I was in the second year of my studies at <a href="https://www.vse.cz/english/" rel="noopener noreferrer" target="_blank">Prague University of Business and Economics</a>. That year I was introduced to HTML, CSS & JavaScript and I immediately fell in love.
                         </p>
                         <p>
-                            Since than I've been helping various clients in the online world. Designing, building websites and small applications as well as communication were parts of my routine alongside with studying at university.
+                            Since than I've been helping various clients in the online world. Designing and building websites and small applications as well as communication were parts of my routine alongside with studying at university.
                         </p>
                         <p>
-                            While I was stuck in the Czech Republic during the global pandemic in 2020, working nonstop from home, I become eager to fully dive deep into the software engineering. 
+                            While I was stuck in the Czech Republic during the global pandemic in 2020 working nonstop from home, I become eager to fully dive deep into software engineering. 
                         </p>
                         <p>
-                            In 2021 I was accepted to <a href="https://www.bcit.ca/programs/software-systems-developer-web-programmer-option-certificate-full-time-699ccertt/" rel="noopener noreferrer" target="_blank">British Columbia Institute of Technology (BCIT), Software Systems Developer program</a>. So I packed my necessary stuff and flew to Vancouver, Canada where I currently live.
+                            In 2021 I was accepted to <a href="https://www.bcit.ca/programs/software-systems-developer-web-programmer-option-certificate-full-time-699ccertt/" rel="noopener noreferrer" target="_blank">British Columbia Institute of Technology (BCIT), Software Systems Developer program</a>. So I moved to Vancouver, Canada where I currently live.
                         </p>
                         <p>
                             My story is to be continued.
@@ -55,7 +55,7 @@ export default function AboutPage({ data }) {
 
                 <section>
                     <h2>Skills</h2>
-                    <p>Tools I used and learned on projects during years.</p>
+                    <p>Tools I've used and learned while working on projects throughout the years.</p>
                     <div className="grid gap-6 pt-2 grid-cols-2 sm:grid-cols-4 lg:grid-cols-8"> 
                         {
                             skills.map( (skill) => (
@@ -72,7 +72,7 @@ export default function AboutPage({ data }) {
 
                 <section>
                     <h2>Personal</h2>
-                    <p>My minimalist list of things I currently use.<sup>updated Apr 7th, 2022</sup></p>
+                    <p>Here is my minimal list of things I currently use.<sup>updated Apr 7th, 2022</sup></p>
 
                     <h3>Software</h3>
                     <ul>

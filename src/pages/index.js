@@ -31,7 +31,7 @@ export default function WebIndexPage({ data }) {
               <StaticImage 
                 alt="Photo of Adam Hemzal"
                 loading="eager"
-                src="../images/adam-hemzal-draw-2022.png"
+                src="../images/adam-hemzal.jpg"
                 className="rounded"
               />
             </div>
