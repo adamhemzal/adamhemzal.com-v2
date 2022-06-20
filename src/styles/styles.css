@@ -10,6 +10,7 @@
 @import "./base/blockquote";
 @import "./base/pre";
 @import "./base/table";
+@import "./base/captions";
 
 /* TEMPLATES */
 @import "./templates/post";

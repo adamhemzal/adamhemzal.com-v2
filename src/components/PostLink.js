@@ -8,7 +8,7 @@ export default function PostLink({ path, title, created, category, customClass }
             <article className="postLink">
                 <p className="title">{title}</p>
                 <p className="cat-date">
-                    <CategoryTag customClass="hidden md:inline-block">{category}</CategoryTag>
+                    <CategoryTag customClass="hidden lg:inline-block">{category}</CategoryTag>
                     {created}
                 </p>
             </article>

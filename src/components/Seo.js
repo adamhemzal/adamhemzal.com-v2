@@ -56,7 +56,7 @@ export default function Seo({ title, description, lang, image, follow, pageType,
       );
     }
 
-    const metaImage = (image) ? image : site.siteMetadata.siteSocialImage;    
+    const metaImage = (image) ? `${site.siteMetadata.siteUrl}${image}` : `${site.siteMetadata.siteUrl}${site.siteMetadata.siteSocialImage}`;    
     const metaTitle = (title) ? title : site.siteMetadata.title;
     const metaRobots = (follow === false) ? `noindex, nofollow` : `index, follow`;
     const metaDescription = (description) ? description : site.siteMetadata.description;
@@ -64,7 +64,7 @@ export default function Seo({ title, description, lang, image, follow, pageType,
     (pageType) ? `${site.siteMetadata.siteUrl}/${pageType}/${pathName}` : 
     (pathName) ? `${site.siteMetadata.siteUrl}/${pathName}` : `${site.siteMetadata.siteUrl}`;
     const ogType = (pageType) ? `article` : `website`;
-
+    console.log(metaImage);
     return (
         <Helmet
             htmlAttributes={{lang}}

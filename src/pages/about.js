@@ -76,10 +76,10 @@ export default function AboutPage({ data }) {
 
                     <h3>Software</h3>
                     <ul>
-                        <li><strong>OS: </strong>Windows 10 (but planning to move to Linux in the next two years)</li>
-                        <li><strong>Coding: </strong><a href="https://code.visualstudio.com/">VSCode</a></li>
+                        <li><strong>OS: </strong>Windows 10</li>
+                        <li><strong>Coding: </strong><a href="https://code.visualstudio.com/">VS Code</a></li>
                         <li><strong>Notes: </strong><a href="https://obsidian.md/">Obsidian</a></li>
-                        <li><strong>Music: </strong><a href="https://soundcloud.com/">SoundCloud</a></li>
+                        <li><strong>Music: </strong><a href="https://soundcloud.com/adamhemi">SoundCloud</a></li>
                         <li><strong>Misc: </strong><a href="https://www.ghisler.com/">Total Commander</a></li>
                     </ul>
 

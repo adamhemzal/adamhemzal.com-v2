@@ -1,8 +1,8 @@
 ---
 slug: "how-to-optimize-images-in-wordpress-without-using-any-plugin"
-title: "Optimize images in WordPress without any plugin"
+title: "Optimize images in WordPress without using any plugin"
 description: "How to optimize JPEG images in WordPress without using any free or paid plugin. Optimize simply by using Node.js and NPM package called imagemin with MozJPEG encoder"
-thumbnail: "[IMAGE HERE]"
+thumbnail: "./social-image-optimization.jpg"
 category: "WordPress"
 tags: 
     - "WordPress"
@@ -18,12 +18,12 @@ As your WordPress website grows in content and the traffic to your site is incre
 
 In this article, you will learn how to optimize large number of images for free and without using any free or paid plugin which could slow down your WordPress site. This article is for absolute beginners and includes code that even non-programmers can run.
 
-## Typical solution for image optimization and a problem
-When you realize that your images are causing issues to your website speed, you start immediately googling, and you'll find several plugins for image optimization. You might install [Smush](https://wordpress.org/plugins/wp-smushit/) or [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/) or even [TinyPNG](https://wordpress.org/plugins/tiny-compress-images/). These plugins usually optimize your images on upload. But if you want to optimize all your current images, you have to typically pay some fee. Paying for the plugin which does the job isn't that horrible, right? But there can be an issue.
+## Typical solution for image optimization
+When you realize that your images are causing issues to your website speed, you start immediately googling and you will find several plugins for image optimization. You can install [Smush](https://wordpress.org/plugins/wp-smushit/) or [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/) or even [TinyPNG](https://wordpress.org/plugins/tiny-compress-images/). These plugins usually optimize your images when uploading. But if you want to optimize all your current images, you have to pay a fee. Paying for the plugin which does the job may sound like a perfect solution but, of course, there can be some issues.
 
-Every website hosting (server with a space where you can run your WordPress website), where your WordPress is running, has some limitations. One of the limitations is called `Maximum script run time` or also in the PHP  `max_execution_time`. It means *how long you can run one PHP script on the server before the script gets timed out by the server and fails.*
+Every website hosting, where your WordPress is running, has some limitations. One of the limitations is called `Maximum script run time` or also in the PHP  `max_execution_time`. It means *how long you can run one PHP script on the server before the script gets timed out by the server and fails.*
 
-When you run bulk image optimization to optimize all images in your WordPress, PHP plugin will be running and optimizing images as long as the script is running. If you have a small WordPress website with hundreds of images, there won't be probably any issue. But, if you're running [WooCommerce](https://woocommerce.com/) website with **1,000 or 10,000** product images, the script will run out of time after one or two minutes and won't be able to finish the bulk image optimization for all your images. In this case, you'll have to use a different approach to solving the image problem.
+When you run bulk image optimization to optimize all images inside your WordPress, plugins will optimize images until they hit the limit of the maximum allowed script runtime. If you have a small WordPress website with hundreds of images, there will probably not be any issue. But if you are running [WooCommerce](https://woocommerce.com/) website with **1,000 or 10,000** product images, the script will run out of time after one or two minutes and will not be able to finish the bulk image optimization for all your images. In this case, you have to use a different approach.
 
 ## Solution: Optimize images outside of the server
 
@@ -31,19 +31,19 @@ One of the possible solutions is to download all your images from the WordPress 
 
 ### Optimization with Node.js and Imagemin
 
-We are going to use [imagemin](https://github.com/imagemin/imagemin) - a NPM package which allows minifying images and [Node.js](https://nodejs.org/en/) to run our NPM minifying package over thousands of images. 
+We are going to use [imagemin](https://github.com/imagemin/imagemin) - a NPM package which allows minifying images and [Node.js](https://nodejs.org/en/) to run our NPM minifying package over thousands of images.
 
-If you don't have Node.js installed, [download](https://nodejs.org/en/download/) it first and install. It's pretty simple. To make sure your node is installed and running, type  `node -v` into a command prompt. You should get the current version of your node.  
+If you don't have Node.js installed, [download](https://nodejs.org/en/download/) it first and install. It's pretty simple. To make sure your node is installed and running, type  `node -v` into a command prompt. You should get the current version of your node.  
 
 Once you have Node.js installed, create a new folder and give it a proper name. Open your folder in the command prompt and type `npm init`. The file `package.json` will be created. This is the initialization file for our project.
 
-Now we have to install [imagemin](https://www.npmjs.com/package/imagemin) package by running a simple command:
+Firstly, we have to install [imagemin](https://www.npmjs.com/package/imagemin) package by running a simple command:
 
 ```bash
 npm install imagemin
 ```
 
-and one of the image minifying plugins. I recommend using [MozJPEG](https://github.com/mozilla/mozjpeg) because [it compress JPEG images similarly](https://siipo.la/blog/is-webp-really-better-than-jpeg) as popular [WebP](https://developers.google.com/speed/webp) format. 
+Secondly, we have to also install one of the image minifying plugins. I recommend using [MozJPEG](https://github.com/mozilla/mozjpeg) because [it compresses JPEG images in a similar way](https://siipo.la/blog/is-webp-really-better-than-jpeg) as the popular [WebP](https://developers.google.com/speed/webp) format.
 
 ```bash
 npm install imagemin-mozjpeg
@@ -51,7 +51,7 @@ npm install imagemin-mozjpeg
 
 Now create `index.js` file and two folders `src` and `build`. You should get this project structure.
 
-[IMAGE HERE]
+![Example of the project structure](./imagemin-project-structure.png "Project structure")
 
 Paste this code to the `index.js`
 
@@ -84,10 +84,9 @@ node index.js
 
 Now all your images are optimized and can be found in the folder `build`.  Below is a simple example of the WordPress images optimization. Original image `cat.jpeg` has been **sized down by approximately 80% from the previous original size**. The size of other images created by WordPress has been **reduced by about 60% to 75%** which is a great result.
 
-[IMAGE HERE]
+![Images before optimization](./files-before-optimization.png "Images BEFORE optimization")
 
-[IMAGE HERE]
+![Images after optimization](./files-after-optimization.png "Images AFTER optimization")
 
 If you're finished with image optimization, upload your images back to the server to the same location `wp-content/uploads` and make sure to overwrite old unoptimized images. You can now check your website in Page Speed Insights. You should get better score.
 
-## Conclusion

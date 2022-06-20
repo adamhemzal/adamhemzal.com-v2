@@ -6,7 +6,7 @@ const { lazy } = require("react");
  */
 module.exports = {
   siteMetadata: {
-    title: `Adam Hemzal`,
+    title: `Adam Hemzal - Software Developer & Blogger`,
     author: `Adam Hemzal`,
     description: 
     `Software developer with the focus on Front-End, UX and Web 3.0. An occasional blogger`,
@@ -109,9 +109,11 @@ module.exports = {
             // handling images in markdown 
             resolve: `gatsby-remark-images`,
             options: {
+              showCaptions: ['title'],
               backgroundColor: `transparent`,
               withWebp: true,
-              quality: 80,
+              withAvif: true,
+              quality: 75,
               maxWidth: 990,
             },
           },
